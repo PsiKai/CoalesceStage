@@ -2,9 +2,9 @@ defaultStorageMapping: WORK
 installedPackages: {}
 jobs:
   Job-1:
-    excludeSelector: ""
+    excludeSelector: "{ location: SOURCE name: LINEITEM }"
     id: 1
-    includeSelector: LINEITEM
+    includeSelector: "LINEITEM OR { location: SOURCE name: CUSTOMER }"
     name: Test Edit Job 2
     steps: []
     subgraphs: []
