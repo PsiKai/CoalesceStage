@@ -1,4 +1,4 @@
-defaultStorageMapping: WORK
+defaultStorageMapping: SAMPLE
 installedPackages: {}
 jobs:
   Job-1:
@@ -9,11 +9,16 @@ jobs:
     steps: []
     subgraphs: []
 locations:
+  BOB_TODD:
+    mappingDefinitions:
+      "3":
+        database: DAVID_I_EDW
+        schema: DEV_RAW
   SAMPLE:
     mappingDefinitions:
       "3":
         database: DAVID_I_EDW
-        schema: QA_STAGING
+        schema: QA_STAGING_foobar
   SOURCE:
     mappingDefinitions:
       "3":
@@ -939,7 +944,7 @@ stepTypes:
     version: 1
   StepType-View:
     id: View
-    isDisabled: true
+    isDisabled: false
     metadata:
       defaultStorageLocation: null
       error: null

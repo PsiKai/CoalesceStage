@@ -1,0 +1,153 @@
+steps:
+  STG_STG_SUPPLIER-07bd4cfb-3632-404f-bedf-0e08a681fe0c:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationName: SAMPLE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 47b3a0fa-a6ff-4d8c-a3a3-d7384fdb6ac7
+              stepCounter: 07bd4cfb-3632-404f-bedf-0e08a681fe0c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: SF*10,000 are populated
+            name: S_SUPPKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 641f77ba-9ed1-4e0f-91aa-10a68070d0da
+              stepCounter: 07bd4cfb-3632-404f-bedf-0e08a681fe0c
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: S_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a8de89a0-cfb0-4ef0-8c48-adee0962d06a
+              stepCounter: 07bd4cfb-3632-404f-bedf-0e08a681fe0c
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: S_ADDRESS
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5f89c9a6-5854-4126-81ac-c2b9ddd66f60
+              stepCounter: 07bd4cfb-3632-404f-bedf-0e08a681fe0c
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Foreign Key to N_NATIONKEY
+            name: S_NATIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7ff4b217-5de4-458f-8a86-e536efc855d5
+              stepCounter: 07bd4cfb-3632-404f-bedf-0e08a681fe0c
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: S_PHONE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: afc4bb8e-7fc6-440a-bc20-519d708d8813
+              stepCounter: 07bd4cfb-3632-404f-bedf-0e08a681fe0c
+            config: {}
+            dataType: NUMBER(12,2)
+            defaultValue: ""
+            description: ""
+            name: S_ACCTBAL
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1c90fdef-991c-4160-ac46-4a50d748a52c
+              stepCounter: 07bd4cfb-3632-404f-bedf-0e08a681fe0c
+            config: {}
+            dataType: VARCHAR(101)
+            defaultValue: ""
+            description: ""
+            name: S_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f064619f-25f5-47fe-afbe-d87cd6396b70
+              stepCounter: 07bd4cfb-3632-404f-bedf-0e08a681fe0c
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6101940b-a26c-425b-9211-cbe67bdc2da1
+              stepCounter: 07bd4cfb-3632-404f-bedf-0e08a681fe0c
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE', 'STG_STG_SUPPLIER') }}
+      name: STG_STG_SUPPLIER
+      schema: ""
+      sqlType: Source
+      table: STG_STG_SUPPLIER
+      type: sourceInput
+    stepCounter: 07bd4cfb-3632-404f-bedf-0e08a681fe0c

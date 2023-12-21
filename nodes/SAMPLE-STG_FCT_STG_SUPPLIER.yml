@@ -1,0 +1,153 @@
+steps:
+  STG_FCT_STG_SUPPLIER-0e124afb-150f-4e18-ae59-e9b1e9b9d5d0:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationName: SAMPLE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39c39224-42ca-4f48-b3cf-14865c48b34a
+              stepCounter: 0e124afb-150f-4e18-ae59-e9b1e9b9d5d0
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: SF*10,000 are populated
+            name: S_SUPPKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 24c2dd1c-190a-40a8-b361-24c295c0675b
+              stepCounter: 0e124afb-150f-4e18-ae59-e9b1e9b9d5d0
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: S_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8de0fc9d-7364-4250-a04c-73e136fb1d0a
+              stepCounter: 0e124afb-150f-4e18-ae59-e9b1e9b9d5d0
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: S_ADDRESS
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6b12e7e7-00de-448e-ba80-818198469c91
+              stepCounter: 0e124afb-150f-4e18-ae59-e9b1e9b9d5d0
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: Foreign Key to N_NATIONKEY
+            name: S_NATIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: af77a0f4-2e09-4ddb-af78-61e38ca12ac4
+              stepCounter: 0e124afb-150f-4e18-ae59-e9b1e9b9d5d0
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: S_PHONE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1d6ee1bd-7557-4f5c-ba57-1201a29a078d
+              stepCounter: 0e124afb-150f-4e18-ae59-e9b1e9b9d5d0
+            config: {}
+            dataType: NUMBER(12,2)
+            defaultValue: ""
+            description: ""
+            name: S_ACCTBAL
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9d58652d-6342-4d63-8df0-d6b9dbacdf71
+              stepCounter: 0e124afb-150f-4e18-ae59-e9b1e9b9d5d0
+            config: {}
+            dataType: VARCHAR(101)
+            defaultValue: ""
+            description: ""
+            name: S_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b279b5cd-0b2b-4e13-afb6-342f34ae5d12
+              stepCounter: 0e124afb-150f-4e18-ae59-e9b1e9b9d5d0
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f1393bd9-038a-43f5-811d-85dacf006613
+              stepCounter: 0e124afb-150f-4e18-ae59-e9b1e9b9d5d0
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE', 'STG_FCT_STG_SUPPLIER') }}
+      name: STG_FCT_STG_SUPPLIER
+      schema: ""
+      sqlType: Source
+      table: STG_FCT_STG_SUPPLIER
+      type: sourceInput
+    stepCounter: 0e124afb-150f-4e18-ae59-e9b1e9b9d5d0
