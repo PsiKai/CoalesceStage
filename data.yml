@@ -1,4 +1,4 @@
-defaultStorageMapping: SAMPLE
+defaultStorageMapping: DESTINATION
 installedPackages: {}
 jobs:
   Job-1:
@@ -9,26 +9,16 @@ jobs:
     steps: []
     subgraphs: []
 locations:
-  BOB_TODD:
+  DESTINATION:
     mappingDefinitions:
       "3":
         database: DAVID_I_EDW
-        schema: DEV_RAW
-  SAMPLE:
-    mappingDefinitions:
-      "3":
-        database: DAVID_I_EDW
-        schema: QA_STAGING
+        schema: ENVIRONMENT_STAGING
   SOURCE:
     mappingDefinitions:
       "3":
         database: COALESCE_SAMPLE_DATABASE
         schema: TPCH_SF001
-  WORK:
-    mappingDefinitions:
-      "3":
-        database: DAVID_I_EDW
-        schema: PUBLIC
 macros: {}
 packages: {}
 projects: {}
