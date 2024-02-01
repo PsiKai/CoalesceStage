@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP241-a19a341e-d04b-49f3-a44f-4fae3ed4021c:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0ac1a203-2288-486a-b80e-5a404c4a79b2
+              stepCounter: a19a341e-d04b-49f3-a44f-4fae3ed4021c
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ae45b823-af94-4595-86d9-b5f37952797d
+                    stepCounter: e4ddcdb8-d655-4dc4-b32a-5014c086bfee
+                transform: ""
+          - columnReference:
+              columnCounter: ae4e8a99-e4e7-4bb4-9da3-94e18080456b
+              stepCounter: a19a341e-d04b-49f3-a44f-4fae3ed4021c
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4900c2b7-355e-474f-9135-a0df5679f503
+                    stepCounter: e4ddcdb8-d655-4dc4-b32a-5014c086bfee
+                transform: ""
+          - columnReference:
+              columnCounter: 01060365-1f93-44be-abe9-bcd0b5aa5abb
+              stepCounter: a19a341e-d04b-49f3-a44f-4fae3ed4021c
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7102d209-4e65-4c8b-8e40-6f5898e7defa
+                    stepCounter: e4ddcdb8-d655-4dc4-b32a-5014c086bfee
+                transform: ""
+          - columnReference:
+              columnCounter: 372062dc-c608-4b5b-bf15-07f941bc486b
+              stepCounter: a19a341e-d04b-49f3-a44f-4fae3ed4021c
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bacf9f3c-92a8-4764-a873-2fd33a3f73c0
+                    stepCounter: e4ddcdb8-d655-4dc4-b32a-5014c086bfee
+                transform: ""
+          - columnReference:
+              columnCounter: b9a68d01-37f5-44d3-a4ad-8ec5bda6cfb1
+              stepCounter: a19a341e-d04b-49f3-a44f-4fae3ed4021c
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 18ec1194-e857-4094-a95a-eb51f8c4a81b
+                    stepCounter: e4ddcdb8-d655-4dc4-b32a-5014c086bfee
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP102
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP102') }} "STG_PARTSUPP102"
+            name: STG_PARTSUPP241
+            noLinkRefs: []
+      name: STG_PARTSUPP241
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: a19a341e-d04b-49f3-a44f-4fae3ed4021c

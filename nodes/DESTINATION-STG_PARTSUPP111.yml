@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP111-caf7c017-b337-4dd5-926f-83a07a0ac055:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 03231336-00bd-48d3-97f8-3e4d86a92eac
+              stepCounter: caf7c017-b337-4dd5-926f-83a07a0ac055
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af9aeaec-e9cd-4110-8aae-a21a27d96408
+                    stepCounter: 73806a4c-c3b8-4fcd-b219-6fcabaa858b1
+                transform: ""
+          - columnReference:
+              columnCounter: 608407d9-d3b5-4d24-bdfd-bacf2887cd70
+              stepCounter: caf7c017-b337-4dd5-926f-83a07a0ac055
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0dafe8c6-b21c-4dfd-b39d-811a22d3c161
+                    stepCounter: 73806a4c-c3b8-4fcd-b219-6fcabaa858b1
+                transform: ""
+          - columnReference:
+              columnCounter: 12fe7029-5a8a-4117-b361-d86e7c3891a6
+              stepCounter: caf7c017-b337-4dd5-926f-83a07a0ac055
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2117c161-aa71-47c0-bbaf-c0cd342c9c29
+                    stepCounter: 73806a4c-c3b8-4fcd-b219-6fcabaa858b1
+                transform: ""
+          - columnReference:
+              columnCounter: cb48e2b1-a547-4a3c-b150-e882f5d998f2
+              stepCounter: caf7c017-b337-4dd5-926f-83a07a0ac055
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 91ef810c-3a82-46cd-b87b-906634f22f1c
+                    stepCounter: 73806a4c-c3b8-4fcd-b219-6fcabaa858b1
+                transform: ""
+          - columnReference:
+              columnCounter: 48d30e1c-8d39-4964-9ada-6604bd889484
+              stepCounter: caf7c017-b337-4dd5-926f-83a07a0ac055
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 465bd7f9-8175-4af8-bdfa-60470e955187
+                    stepCounter: 73806a4c-c3b8-4fcd-b219-6fcabaa858b1
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP39
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP39') }} "STG_PARTSUPP39"
+            name: STG_PARTSUPP111
+            noLinkRefs: []
+      name: STG_PARTSUPP111
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: caf7c017-b337-4dd5-926f-83a07a0ac055

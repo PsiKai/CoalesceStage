@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP43-1479dbc6-5a3d-47d9-9097-a7b9c6c534fa:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: fc8a0f2f-54f9-4d5c-841d-956034b08b2b
+              stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e05151ce-4868-422e-924f-f52d4bdbc13f
+                    stepCounter: 5303d2f4-642c-4e68-a343-1b9594d01a03
+                transform: ""
+          - columnReference:
+              columnCounter: 11feace3-9a2c-40d8-b3f1-b799104a50d2
+              stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d676389-3cd4-4bf6-bbd1-8c12b520cfcc
+                    stepCounter: 5303d2f4-642c-4e68-a343-1b9594d01a03
+                transform: ""
+          - columnReference:
+              columnCounter: 9ff44862-3ba9-433b-a8ad-8eab95f44811
+              stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b8b274bd-b23d-4c39-a530-1c8d44de22f2
+                    stepCounter: 5303d2f4-642c-4e68-a343-1b9594d01a03
+                transform: ""
+          - columnReference:
+              columnCounter: a595787f-75f7-4448-8d86-40ec4723309e
+              stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afac37b3-cfe1-4b7a-8213-cf3c7cd07a50
+                    stepCounter: 5303d2f4-642c-4e68-a343-1b9594d01a03
+                transform: ""
+          - columnReference:
+              columnCounter: 34517e36-3a7f-4a90-88c2-82ccf071ede5
+              stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0fe5b273-852b-4ead-be6f-61e0f91729c9
+                    stepCounter: 5303d2f4-642c-4e68-a343-1b9594d01a03
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP15
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP15') }} "STG_PARTSUPP15"
+            name: STG_PARTSUPP43
+            noLinkRefs: []
+      name: STG_PARTSUPP43
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa

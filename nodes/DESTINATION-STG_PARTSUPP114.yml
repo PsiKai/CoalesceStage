@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP114-f25c05d5-1f9d-4ce0-8ac2-7096414072e8:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 324453a6-cf4f-4ba2-a197-b2f894301729
+              stepCounter: f25c05d5-1f9d-4ce0-8ac2-7096414072e8
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f53378ac-599b-4a94-93dd-efb87afe4576
+                    stepCounter: 8119b227-997f-496d-982c-bf6c88ab9edd
+                transform: ""
+          - columnReference:
+              columnCounter: ba43f7e6-93b2-408f-84d6-2f55f846aead
+              stepCounter: f25c05d5-1f9d-4ce0-8ac2-7096414072e8
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4bd9b22b-65e0-4f39-ac05-9bfd61973425
+                    stepCounter: 8119b227-997f-496d-982c-bf6c88ab9edd
+                transform: ""
+          - columnReference:
+              columnCounter: 3954e6f0-8a46-46cd-8732-542b0e7b8611
+              stepCounter: f25c05d5-1f9d-4ce0-8ac2-7096414072e8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b25de108-f72f-48e4-931e-ce238b77f8d0
+                    stepCounter: 8119b227-997f-496d-982c-bf6c88ab9edd
+                transform: ""
+          - columnReference:
+              columnCounter: 934445c5-d9c3-48ad-bb99-8f9e47187ff1
+              stepCounter: f25c05d5-1f9d-4ce0-8ac2-7096414072e8
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 06399a6f-43b0-4626-b411-acceb2a7da84
+                    stepCounter: 8119b227-997f-496d-982c-bf6c88ab9edd
+                transform: ""
+          - columnReference:
+              columnCounter: 33b4b784-f452-4828-a606-a93a93f6f777
+              stepCounter: f25c05d5-1f9d-4ce0-8ac2-7096414072e8
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 130145c7-f915-4066-8db0-0ea8002c6426
+                    stepCounter: 8119b227-997f-496d-982c-bf6c88ab9edd
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP38
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP38') }} "STG_PARTSUPP38"
+            name: STG_PARTSUPP114
+            noLinkRefs: []
+      name: STG_PARTSUPP114
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: f25c05d5-1f9d-4ce0-8ac2-7096414072e8

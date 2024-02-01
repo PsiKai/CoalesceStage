@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP186-694bc4b6-03a0-485e-9c03-a2b14eaf5866:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 75479632-41a1-4ac8-8efa-35c30267d567
+              stepCounter: 694bc4b6-03a0-485e-9c03-a2b14eaf5866
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9761660-aeec-4c3d-9201-e9df511e832d
+                    stepCounter: d5efd5eb-9d3f-4284-9a7d-a0d2ec9ee53b
+                transform: ""
+          - columnReference:
+              columnCounter: 8d99d42c-0635-4c2f-bd6b-6ba0d40a3feb
+              stepCounter: 694bc4b6-03a0-485e-9c03-a2b14eaf5866
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32e82aa9-3e44-48e9-b283-10e104b499e9
+                    stepCounter: d5efd5eb-9d3f-4284-9a7d-a0d2ec9ee53b
+                transform: ""
+          - columnReference:
+              columnCounter: aa59ac9d-1eb1-495b-8588-bc643de811cc
+              stepCounter: 694bc4b6-03a0-485e-9c03-a2b14eaf5866
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26e3ba2c-a56d-4ba6-8337-2d6a1eccd4b9
+                    stepCounter: d5efd5eb-9d3f-4284-9a7d-a0d2ec9ee53b
+                transform: ""
+          - columnReference:
+              columnCounter: 9d7d72ec-25ae-484a-bffd-d022bd2d720c
+              stepCounter: 694bc4b6-03a0-485e-9c03-a2b14eaf5866
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fee35a8f-ab36-4d13-a702-149c2fde3346
+                    stepCounter: d5efd5eb-9d3f-4284-9a7d-a0d2ec9ee53b
+                transform: ""
+          - columnReference:
+              columnCounter: 91edf485-c23c-4610-8bdb-2e87b112d043
+              stepCounter: 694bc4b6-03a0-485e-9c03-a2b14eaf5866
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 31aa5ae5-870b-4c8e-b688-ac52c43f21a9
+                    stepCounter: d5efd5eb-9d3f-4284-9a7d-a0d2ec9ee53b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP48
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP48') }} "STG_PARTSUPP48"
+            name: STG_PARTSUPP186
+            noLinkRefs: []
+      name: STG_PARTSUPP186
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 694bc4b6-03a0-485e-9c03-a2b14eaf5866

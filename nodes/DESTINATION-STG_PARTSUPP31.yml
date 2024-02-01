@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP31-4ab41035-32d3-4bca-91fc-200d50f8409e:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e0c9f1ca-57ff-4f21-9f8c-d885d3a50a66
+              stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 417661e4-e629-422c-aa2a-2fac65c47f4b
+                    stepCounter: ce580859-06a5-471d-a386-3687e19aeea0
+                transform: ""
+          - columnReference:
+              columnCounter: e4c4ba99-dc60-4367-8e90-156a4c21d972
+              stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d496f68f-0f2a-4eb6-8cff-bad325113c35
+                    stepCounter: ce580859-06a5-471d-a386-3687e19aeea0
+                transform: ""
+          - columnReference:
+              columnCounter: 59d4b0e7-5d33-4324-92af-278d74464fc3
+              stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b1465fef-dbb4-43fe-961e-7e325a3dd4cf
+                    stepCounter: ce580859-06a5-471d-a386-3687e19aeea0
+                transform: ""
+          - columnReference:
+              columnCounter: 0bc1188b-320a-4593-928e-71359d762a45
+              stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 474b9e49-ed7e-4429-94bd-00e303407f52
+                    stepCounter: ce580859-06a5-471d-a386-3687e19aeea0
+                transform: ""
+          - columnReference:
+              columnCounter: 53c301d9-ab1c-49aa-8cbb-ccc9ca7c63cd
+              stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9270f4bf-581f-4cb2-9878-4dda05f12064
+                    stepCounter: ce580859-06a5-471d-a386-3687e19aeea0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP10
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP10') }} "STG_PARTSUPP10"
+            name: STG_PARTSUPP31
+            noLinkRefs: []
+      name: STG_PARTSUPP31
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e

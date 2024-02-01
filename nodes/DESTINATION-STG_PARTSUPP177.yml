@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP177-d9378484-ee85-41fc-8303-fe8bd107691a:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 89d3b26b-c8e2-4db8-bb80-6032ec0ba916
+              stepCounter: d9378484-ee85-41fc-8303-fe8bd107691a
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f10b3b1a-76e1-4599-8374-0a5e4a21aa5d
+                    stepCounter: 80752f57-8440-4a7e-b48a-c4c4e16b10c8
+                transform: ""
+          - columnReference:
+              columnCounter: 4a3d69d5-9558-4b32-acf2-f54da4f7c0c5
+              stepCounter: d9378484-ee85-41fc-8303-fe8bd107691a
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 48da1c9d-cd5c-48b4-98fe-d13c6bf89541
+                    stepCounter: 80752f57-8440-4a7e-b48a-c4c4e16b10c8
+                transform: ""
+          - columnReference:
+              columnCounter: 813b897b-41e7-4b8d-b28b-07854449f2ba
+              stepCounter: d9378484-ee85-41fc-8303-fe8bd107691a
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fefb1213-6d84-4496-b891-b5b655f9be17
+                    stepCounter: 80752f57-8440-4a7e-b48a-c4c4e16b10c8
+                transform: ""
+          - columnReference:
+              columnCounter: f9c5e75f-a66e-4a40-9713-233125948933
+              stepCounter: d9378484-ee85-41fc-8303-fe8bd107691a
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c090127-9275-417c-ac8a-03a72d7d4c48
+                    stepCounter: 80752f57-8440-4a7e-b48a-c4c4e16b10c8
+                transform: ""
+          - columnReference:
+              columnCounter: 5995dfe9-c2c4-4f0d-bd58-6b3ad75012bd
+              stepCounter: d9378484-ee85-41fc-8303-fe8bd107691a
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 982d4453-bb25-4ec0-853f-1e382e8b603c
+                    stepCounter: 80752f57-8440-4a7e-b48a-c4c4e16b10c8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP32
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP32') }} "STG_PARTSUPP32"
+            name: STG_PARTSUPP177
+            noLinkRefs: []
+      name: STG_PARTSUPP177
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: d9378484-ee85-41fc-8303-fe8bd107691a

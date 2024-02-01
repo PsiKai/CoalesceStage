@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP233-aa845354-f696-4d4c-8fe4-c8addc1cd102:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 17e7eba7-2aaf-4a82-891f-e2b871de1240
+              stepCounter: aa845354-f696-4d4c-8fe4-c8addc1cd102
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f6173855-01c0-4dec-a644-f9af1d5f59a1
+                    stepCounter: ce317954-e4ab-4ccb-851d-2ab31aee3f12
+                transform: ""
+          - columnReference:
+              columnCounter: 5ac2a808-1688-45d3-a3cb-cb3dacbe10aa
+              stepCounter: aa845354-f696-4d4c-8fe4-c8addc1cd102
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 897bfcc9-f30b-494f-b13f-78c68cfedf8d
+                    stepCounter: ce317954-e4ab-4ccb-851d-2ab31aee3f12
+                transform: ""
+          - columnReference:
+              columnCounter: 3a9f5b09-e5d6-42ad-b186-e2661a35ae36
+              stepCounter: aa845354-f696-4d4c-8fe4-c8addc1cd102
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c70df7cd-06e6-496f-8540-792640882c98
+                    stepCounter: ce317954-e4ab-4ccb-851d-2ab31aee3f12
+                transform: ""
+          - columnReference:
+              columnCounter: 7b5bbdab-fccb-4326-afb8-b293d05f2dd9
+              stepCounter: aa845354-f696-4d4c-8fe4-c8addc1cd102
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 065f347c-f454-40d0-86c2-5bb1f2c56604
+                    stepCounter: ce317954-e4ab-4ccb-851d-2ab31aee3f12
+                transform: ""
+          - columnReference:
+              columnCounter: 2027f6d4-4b7c-4d31-97ff-c4aa39abee70
+              stepCounter: aa845354-f696-4d4c-8fe4-c8addc1cd102
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ffdf4532-0df1-4837-84d5-8ac666204883
+                    stepCounter: ce317954-e4ab-4ccb-851d-2ab31aee3f12
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP70
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP70') }} "STG_PARTSUPP70"
+            name: STG_PARTSUPP233
+            noLinkRefs: []
+      name: STG_PARTSUPP233
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: aa845354-f696-4d4c-8fe4-c8addc1cd102

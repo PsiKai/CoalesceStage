@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP203-1db0951c-1e8d-4a3c-9248-65e43cf2ba93:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 35877108-fcd8-4e41-8b30-d1901ebe5538
+              stepCounter: 1db0951c-1e8d-4a3c-9248-65e43cf2ba93
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e6c787d-dc9a-49c9-a39e-172edf9bd345
+                    stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89
+                transform: ""
+          - columnReference:
+              columnCounter: 7d385a95-1220-4967-b292-4fa8f2622a16
+              stepCounter: 1db0951c-1e8d-4a3c-9248-65e43cf2ba93
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 415a5b81-f877-4e87-bcc2-94d8d14715c0
+                    stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89
+                transform: ""
+          - columnReference:
+              columnCounter: a3bc0ec9-1d24-4d3a-876c-cc527a28d4e2
+              stepCounter: 1db0951c-1e8d-4a3c-9248-65e43cf2ba93
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 586d46cc-38e8-41a2-b544-b221903815ed
+                    stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89
+                transform: ""
+          - columnReference:
+              columnCounter: 723e0730-9062-4f7a-afbf-dfcb0de57f82
+              stepCounter: 1db0951c-1e8d-4a3c-9248-65e43cf2ba93
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b5a016c5-83f7-4d2b-9acb-356b5db2ae4f
+                    stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89
+                transform: ""
+          - columnReference:
+              columnCounter: ffe006c3-d4b6-4bc7-b5fa-7ea52efe698a
+              stepCounter: 1db0951c-1e8d-4a3c-9248-65e43cf2ba93
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff0e8a42-68bd-40e6-b910-1101b70565ad
+                    stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP95
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP95') }} "STG_PARTSUPP95"
+            name: STG_PARTSUPP203
+            noLinkRefs: []
+      name: STG_PARTSUPP203
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1db0951c-1e8d-4a3c-9248-65e43cf2ba93

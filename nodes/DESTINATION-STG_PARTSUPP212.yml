@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP212-cdaa75fe-0209-446a-b1d8-7e9f3decca83:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 98382c49-7a17-4496-98b0-fd45b740bd6a
+              stepCounter: cdaa75fe-0209-446a-b1d8-7e9f3decca83
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f68c2efb-2afb-42b5-82b5-03b3bd70e126
+                    stepCounter: 69de37a8-5270-4c0b-a5c6-40c83815e9de
+                transform: ""
+          - columnReference:
+              columnCounter: cfe29b70-3bc6-40ee-bad2-fed217547de3
+              stepCounter: cdaa75fe-0209-446a-b1d8-7e9f3decca83
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f0feeff-bf5d-46c1-80ab-ea4617fca4c3
+                    stepCounter: 69de37a8-5270-4c0b-a5c6-40c83815e9de
+                transform: ""
+          - columnReference:
+              columnCounter: 4ddcb948-6cc2-49f0-ae90-67fd47c66a71
+              stepCounter: cdaa75fe-0209-446a-b1d8-7e9f3decca83
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d98af81-9311-4715-8743-8dab89b75c7d
+                    stepCounter: 69de37a8-5270-4c0b-a5c6-40c83815e9de
+                transform: ""
+          - columnReference:
+              columnCounter: 5d0692d2-3013-4d02-ad23-cde48f9e91c9
+              stepCounter: cdaa75fe-0209-446a-b1d8-7e9f3decca83
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5ec11c3a-ebe5-4d17-ae93-f73d4cfd18d2
+                    stepCounter: 69de37a8-5270-4c0b-a5c6-40c83815e9de
+                transform: ""
+          - columnReference:
+              columnCounter: 8f431d7f-3a5a-4122-9c5e-b0334dd016c9
+              stepCounter: cdaa75fe-0209-446a-b1d8-7e9f3decca83
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 269eb0b8-5797-407f-b8f8-5b481abb88ac
+                    stepCounter: 69de37a8-5270-4c0b-a5c6-40c83815e9de
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP110
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP110') }} "STG_PARTSUPP110"
+            name: STG_PARTSUPP212
+            noLinkRefs: []
+      name: STG_PARTSUPP212
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: cdaa75fe-0209-446a-b1d8-7e9f3decca83

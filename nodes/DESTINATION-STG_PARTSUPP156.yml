@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP156-72df18a9-75b6-489e-bb7d-9c13a3e1acf6:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b9368fe7-3fae-426d-ae91-fb1db4f5287b
+              stepCounter: 72df18a9-75b6-489e-bb7d-9c13a3e1acf6
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c6cb8808-3176-44ca-968d-a5650a6ba34e
+                    stepCounter: ebe17a80-8e21-4e39-9336-ab43fdf3217c
+                transform: ""
+          - columnReference:
+              columnCounter: ba3f1e67-2b81-4557-b05a-b668ca721fd0
+              stepCounter: 72df18a9-75b6-489e-bb7d-9c13a3e1acf6
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df3874cc-7322-4266-89b7-a233734bc9eb
+                    stepCounter: ebe17a80-8e21-4e39-9336-ab43fdf3217c
+                transform: ""
+          - columnReference:
+              columnCounter: c33be7f9-0b4f-4973-b92d-477a533ab8f0
+              stepCounter: 72df18a9-75b6-489e-bb7d-9c13a3e1acf6
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32b99fed-4c6f-424d-8a77-c52a790817fa
+                    stepCounter: ebe17a80-8e21-4e39-9336-ab43fdf3217c
+                transform: ""
+          - columnReference:
+              columnCounter: 804af1b2-0efa-4615-97ac-0b7139233bb5
+              stepCounter: 72df18a9-75b6-489e-bb7d-9c13a3e1acf6
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c0fbca77-90c2-4f28-98e0-e68ab3488651
+                    stepCounter: ebe17a80-8e21-4e39-9336-ab43fdf3217c
+                transform: ""
+          - columnReference:
+              columnCounter: 23264bc7-b7ca-41ff-bef0-5032abc6e16f
+              stepCounter: 72df18a9-75b6-489e-bb7d-9c13a3e1acf6
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1feaf657-6f50-4856-9ac2-f9a6466167e8
+                    stepCounter: ebe17a80-8e21-4e39-9336-ab43fdf3217c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP28
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP28') }} "STG_PARTSUPP28"
+            name: STG_PARTSUPP156
+            noLinkRefs: []
+      name: STG_PARTSUPP156
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 72df18a9-75b6-489e-bb7d-9c13a3e1acf6

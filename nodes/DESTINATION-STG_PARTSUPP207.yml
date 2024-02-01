@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP207-3d18f021-7761-4172-b96d-0d3ed47edca7:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: c9666f0b-41e3-4dc7-8836-977e9decb912
+              stepCounter: 3d18f021-7761-4172-b96d-0d3ed47edca7
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fd24c243-fa32-4b99-a755-b878dff48a10
+                    stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac
+                transform: ""
+          - columnReference:
+              columnCounter: 11ceeedf-27db-4cf0-afa5-e9733a836796
+              stepCounter: 3d18f021-7761-4172-b96d-0d3ed47edca7
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e644c6ac-cd80-4ec0-9f1a-3a01551337c4
+                    stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac
+                transform: ""
+          - columnReference:
+              columnCounter: aef72179-4860-44ab-a580-0e41897bc5d2
+              stepCounter: 3d18f021-7761-4172-b96d-0d3ed47edca7
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 851b568a-6041-4dec-bd9e-e101eaaed5df
+                    stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac
+                transform: ""
+          - columnReference:
+              columnCounter: ad128fa5-93b0-4ce5-868e-9dd3e6969913
+              stepCounter: 3d18f021-7761-4172-b96d-0d3ed47edca7
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1ea14870-a11a-422a-9ce8-541efd0d63db
+                    stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac
+                transform: ""
+          - columnReference:
+              columnCounter: 92992058-ae55-43b3-be6a-fefb5476e5e1
+              stepCounter: 3d18f021-7761-4172-b96d-0d3ed47edca7
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ab90eb35-5b4f-40f2-a605-51620f8c75fd
+                    stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP79
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP79') }} "STG_PARTSUPP79"
+            name: STG_PARTSUPP207
+            noLinkRefs: []
+      name: STG_PARTSUPP207
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 3d18f021-7761-4172-b96d-0d3ed47edca7

@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP155-5f8fcba1-3b4c-416d-a309-c14ab854de28:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 41ccceac-3b4e-40ec-ba2f-bf8865826cbb
+              stepCounter: 5f8fcba1-3b4c-416d-a309-c14ab854de28
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c5800ac3-0183-484a-996b-a6dac91afe41
+                    stepCounter: e8a2e99f-193c-44ff-bcd5-22b2a31fd796
+                transform: ""
+          - columnReference:
+              columnCounter: e6892b00-4e8c-4c1f-aa3e-635a179e3373
+              stepCounter: 5f8fcba1-3b4c-416d-a309-c14ab854de28
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 01568abd-99f5-4477-a39d-8d1348c2ed76
+                    stepCounter: e8a2e99f-193c-44ff-bcd5-22b2a31fd796
+                transform: ""
+          - columnReference:
+              columnCounter: 16d5fe5e-edff-4afa-b347-3f3fca8d1d8c
+              stepCounter: 5f8fcba1-3b4c-416d-a309-c14ab854de28
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29ea02aa-e944-4f5b-84a7-80189cb78c38
+                    stepCounter: e8a2e99f-193c-44ff-bcd5-22b2a31fd796
+                transform: ""
+          - columnReference:
+              columnCounter: a736021b-f368-4f59-8b91-f942bf51c565
+              stepCounter: 5f8fcba1-3b4c-416d-a309-c14ab854de28
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8620c215-0b4d-4407-969b-a855a51f6abb
+                    stepCounter: e8a2e99f-193c-44ff-bcd5-22b2a31fd796
+                transform: ""
+          - columnReference:
+              columnCounter: 86012eb1-b876-4b49-8698-066cac42d5db
+              stepCounter: 5f8fcba1-3b4c-416d-a309-c14ab854de28
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bb6ae905-df50-4468-a9de-bf4746f0d0ac
+                    stepCounter: e8a2e99f-193c-44ff-bcd5-22b2a31fd796
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP23
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP23') }} "STG_PARTSUPP23"
+            name: STG_PARTSUPP155
+            noLinkRefs: []
+      name: STG_PARTSUPP155
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 5f8fcba1-3b4c-416d-a309-c14ab854de28

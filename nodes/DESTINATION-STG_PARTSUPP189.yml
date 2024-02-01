@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP189-3f5cf608-23ba-4549-9869-1ed9eb7474bf:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b936abd3-70f7-4f92-b0db-ad73d5c83a2e
+              stepCounter: 3f5cf608-23ba-4549-9869-1ed9eb7474bf
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0b066b61-4da5-433f-b5ba-9e11f8fa6e5e
+                    stepCounter: e6735afc-fd95-4881-8e5a-98642ccc2def
+                transform: ""
+          - columnReference:
+              columnCounter: a0b17fe6-c602-47f9-9f10-2354abed6732
+              stepCounter: 3f5cf608-23ba-4549-9869-1ed9eb7474bf
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 21780825-8a8f-45c3-a777-8a839a31986f
+                    stepCounter: e6735afc-fd95-4881-8e5a-98642ccc2def
+                transform: ""
+          - columnReference:
+              columnCounter: 4dcff221-6be7-4a52-bca0-2f6e41891d6c
+              stepCounter: 3f5cf608-23ba-4549-9869-1ed9eb7474bf
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0cb263d9-29a4-4471-a02f-43f00072cdd8
+                    stepCounter: e6735afc-fd95-4881-8e5a-98642ccc2def
+                transform: ""
+          - columnReference:
+              columnCounter: 0c19dd34-a31b-4253-b9f4-caa3ec916aeb
+              stepCounter: 3f5cf608-23ba-4549-9869-1ed9eb7474bf
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55c285db-d7e6-46b6-9e05-79f26ae6414f
+                    stepCounter: e6735afc-fd95-4881-8e5a-98642ccc2def
+                transform: ""
+          - columnReference:
+              columnCounter: 8dd01498-0c07-4ee4-9838-5cffc3e6abe4
+              stepCounter: 3f5cf608-23ba-4549-9869-1ed9eb7474bf
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d47b0ca-ae85-43ec-a234-06d5b60f18fb
+                    stepCounter: e6735afc-fd95-4881-8e5a-98642ccc2def
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP60
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP60') }} "STG_PARTSUPP60"
+            name: STG_PARTSUPP189
+            noLinkRefs: []
+      name: STG_PARTSUPP189
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 3f5cf608-23ba-4549-9869-1ed9eb7474bf

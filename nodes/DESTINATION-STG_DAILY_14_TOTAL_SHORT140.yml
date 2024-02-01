@@ -1,0 +1,65 @@
+steps:
+  STG_DAILY_14_TOTAL_SHORT140-774ece6e-3952-482a-8824-d41dd476149c:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: befd19be-81b6-4d3d-b520-e37a9a7b38ec
+              stepCounter: 774ece6e-3952-482a-8824-d41dd476149c
+            dataType: VARIANT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: V
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: feb4bb88-9d96-471a-b2b8-b7acc00a4a74
+                    stepCounter: 306faa43-1ef0-4184-862a-8f08b35a2db5
+                transform: ""
+          - columnReference:
+              columnCounter: 845329ef-2d63-465a-82cf-97c39634d4d3
+              stepCounter: 774ece6e-3952-482a-8824-d41dd476149c
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: T
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 48dc447a-9ba4-4092-bf88-a0ab2e2cb899
+                    stepCounter: 306faa43-1ef0-4184-862a-8f08b35a2db5
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_DAILY_14_TOTAL_SHORT12
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_DAILY_14_TOTAL_SHORT12') }} "STG_DAILY_14_TOTAL_SHORT12"
+            name: STG_DAILY_14_TOTAL_SHORT140
+            noLinkRefs: []
+      name: STG_DAILY_14_TOTAL_SHORT140
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 774ece6e-3952-482a-8824-d41dd476149c

@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP239-717d1b07-f904-4dc1-85d3-963ad4b10016:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e830d876-362d-4c58-b4bb-cf5c4877f9c9
+              stepCounter: 717d1b07-f904-4dc1-85d3-963ad4b10016
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c4307c8-1884-42c5-a39d-d01c5ab09483
+                    stepCounter: e402ba79-07f9-4a79-83db-d81baf17d556
+                transform: ""
+          - columnReference:
+              columnCounter: 9dbdb3e0-a496-4138-bff9-eb5d493bac80
+              stepCounter: 717d1b07-f904-4dc1-85d3-963ad4b10016
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0384453e-a3a2-4f77-b6d6-d416e1d00baf
+                    stepCounter: e402ba79-07f9-4a79-83db-d81baf17d556
+                transform: ""
+          - columnReference:
+              columnCounter: 5d528114-68d0-4045-993b-3753ab09821b
+              stepCounter: 717d1b07-f904-4dc1-85d3-963ad4b10016
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 150c9d6c-189a-4724-b962-bbaefeefaa42
+                    stepCounter: e402ba79-07f9-4a79-83db-d81baf17d556
+                transform: ""
+          - columnReference:
+              columnCounter: 134d63f4-90f7-43eb-86c3-6acd1c29dc7e
+              stepCounter: 717d1b07-f904-4dc1-85d3-963ad4b10016
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72a8485e-1286-42ed-ad4c-cee1af5dcaa0
+                    stepCounter: e402ba79-07f9-4a79-83db-d81baf17d556
+                transform: ""
+          - columnReference:
+              columnCounter: f96632a1-ef3c-4e99-96b3-70b11677dee2
+              stepCounter: 717d1b07-f904-4dc1-85d3-963ad4b10016
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f89a0174-11b2-4662-a47e-05e49b1beecd
+                    stepCounter: e402ba79-07f9-4a79-83db-d81baf17d556
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP71
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP71') }} "STG_PARTSUPP71"
+            name: STG_PARTSUPP239
+            noLinkRefs: []
+      name: STG_PARTSUPP239
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 717d1b07-f904-4dc1-85d3-963ad4b10016

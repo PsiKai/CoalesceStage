@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP169-f2ba420f-1aa8-40e7-ba82-85373e32a350:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e47c71c3-2e53-41cb-b28a-6ddd4c075042
+              stepCounter: f2ba420f-1aa8-40e7-ba82-85373e32a350
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29375269-b947-43ee-9a05-250ee75d3586
+                    stepCounter: 52106348-01bd-4a59-8aac-191616297bfa
+                transform: ""
+          - columnReference:
+              columnCounter: 8722efa3-ed51-412e-a4ca-c704ccb80be9
+              stepCounter: f2ba420f-1aa8-40e7-ba82-85373e32a350
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 54bbdb15-08fb-488c-a86c-39b40cef9e83
+                    stepCounter: 52106348-01bd-4a59-8aac-191616297bfa
+                transform: ""
+          - columnReference:
+              columnCounter: 9b4df007-b5db-4d1e-b8a0-6b7463e5ce9a
+              stepCounter: f2ba420f-1aa8-40e7-ba82-85373e32a350
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc21c245-729a-4331-a313-247464eafd29
+                    stepCounter: 52106348-01bd-4a59-8aac-191616297bfa
+                transform: ""
+          - columnReference:
+              columnCounter: b3af073f-675b-40f7-9753-83e0a9d59ab2
+              stepCounter: f2ba420f-1aa8-40e7-ba82-85373e32a350
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bfad3156-c063-4092-8022-8c1c3888d6e1
+                    stepCounter: 52106348-01bd-4a59-8aac-191616297bfa
+                transform: ""
+          - columnReference:
+              columnCounter: 1893b78a-b3bb-4508-9700-1d87cab36ab2
+              stepCounter: f2ba420f-1aa8-40e7-ba82-85373e32a350
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2f140e45-4dac-4bad-b2af-9e242dd1e473
+                    stepCounter: 52106348-01bd-4a59-8aac-191616297bfa
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP33
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP33') }} "STG_PARTSUPP33"
+            name: STG_PARTSUPP169
+            noLinkRefs: []
+      name: STG_PARTSUPP169
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: f2ba420f-1aa8-40e7-ba82-85373e32a350

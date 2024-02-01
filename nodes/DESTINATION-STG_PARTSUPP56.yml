@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP56-36a86cc2-6a46-481d-bf46-d27ad25290a5:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0e848a07-2a44-471a-b7bb-b33b25d1edfd
+              stepCounter: 36a86cc2-6a46-481d-bf46-d27ad25290a5
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1f729db6-57f7-40eb-891e-03d96bb7644a
+                    stepCounter: b51c06b2-e5db-4e8d-9be8-c8bf229fd4b7
+                transform: ""
+          - columnReference:
+              columnCounter: a46a20ad-399e-4d80-a791-1de95b6722eb
+              stepCounter: 36a86cc2-6a46-481d-bf46-d27ad25290a5
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7b5ed77d-cc96-4c8c-922d-4d512b0dd4ac
+                    stepCounter: b51c06b2-e5db-4e8d-9be8-c8bf229fd4b7
+                transform: ""
+          - columnReference:
+              columnCounter: 2825674e-25a9-47b2-8f3c-3e2830aeae91
+              stepCounter: 36a86cc2-6a46-481d-bf46-d27ad25290a5
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 602761f0-3a9a-4e7c-860f-b738314daef2
+                    stepCounter: b51c06b2-e5db-4e8d-9be8-c8bf229fd4b7
+                transform: ""
+          - columnReference:
+              columnCounter: 4ae4ac27-53e4-45cd-a5c6-50045fc37249
+              stepCounter: 36a86cc2-6a46-481d-bf46-d27ad25290a5
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10eb619b-e713-42d0-8ba5-bc1dc6797047
+                    stepCounter: b51c06b2-e5db-4e8d-9be8-c8bf229fd4b7
+                transform: ""
+          - columnReference:
+              columnCounter: 17267094-3e75-48c9-b9b1-929d4082a413
+              stepCounter: 36a86cc2-6a46-481d-bf46-d27ad25290a5
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d90557f-5500-49b8-96d2-8f45801680eb
+                    stepCounter: b51c06b2-e5db-4e8d-9be8-c8bf229fd4b7
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP20
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP20') }} "STG_PARTSUPP20"
+            name: STG_PARTSUPP56
+            noLinkRefs: []
+      name: STG_PARTSUPP56
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 36a86cc2-6a46-481d-bf46-d27ad25290a5

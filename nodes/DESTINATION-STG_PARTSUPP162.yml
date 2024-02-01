@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP162-7480c9d6-92ee-4e62-a404-cd0d642f4415:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: be0aad48-aaf5-45ba-a2b5-80f8ee72c7a6
+              stepCounter: 7480c9d6-92ee-4e62-a404-cd0d642f4415
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af89cdde-54a2-4fd0-81c3-48769d71ef0c
+                    stepCounter: 2bf199dd-7823-4721-be41-ea7306039051
+                transform: ""
+          - columnReference:
+              columnCounter: 07140220-a33e-4132-ae02-6a9c77541677
+              stepCounter: 7480c9d6-92ee-4e62-a404-cd0d642f4415
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f56236ed-1039-406a-9707-b2463c994a57
+                    stepCounter: 2bf199dd-7823-4721-be41-ea7306039051
+                transform: ""
+          - columnReference:
+              columnCounter: 01fe194d-551c-4aa7-944f-7347c4420bb3
+              stepCounter: 7480c9d6-92ee-4e62-a404-cd0d642f4415
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 49db3115-144a-4f97-a117-d95fc7d911bc
+                    stepCounter: 2bf199dd-7823-4721-be41-ea7306039051
+                transform: ""
+          - columnReference:
+              columnCounter: 0ebdbed5-d63a-4289-b23d-685f3cd3ba62
+              stepCounter: 7480c9d6-92ee-4e62-a404-cd0d642f4415
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 032aa648-f25f-414b-808f-ab9d2984a9cc
+                    stepCounter: 2bf199dd-7823-4721-be41-ea7306039051
+                transform: ""
+          - columnReference:
+              columnCounter: 56ef625b-7114-4b5b-b092-2fee759598ac
+              stepCounter: 7480c9d6-92ee-4e62-a404-cd0d642f4415
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 68c9a0b1-467b-466c-87d5-6d82607c3014
+                    stepCounter: 2bf199dd-7823-4721-be41-ea7306039051
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP36
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP36') }} "STG_PARTSUPP36"
+            name: STG_PARTSUPP162
+            noLinkRefs: []
+      name: STG_PARTSUPP162
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 7480c9d6-92ee-4e62-a404-cd0d642f4415

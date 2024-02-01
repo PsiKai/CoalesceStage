@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP191-a1563329-7572-41fa-ae33-1eee28fe6c02:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2a7adf39-cb7a-4e26-932a-9eedfb5374eb
+              stepCounter: a1563329-7572-41fa-ae33-1eee28fe6c02
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b2030949-42b1-41b1-9ecf-1c14e6f0c6b2
+                    stepCounter: f267ac7b-04dd-4f44-9a9b-cc8a480d78a8
+                transform: ""
+          - columnReference:
+              columnCounter: 56c0958c-63ae-45bf-a1cd-2e2a8f973e82
+              stepCounter: a1563329-7572-41fa-ae33-1eee28fe6c02
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b45d3f2c-80bc-46ea-b6e7-06b3578a67b5
+                    stepCounter: f267ac7b-04dd-4f44-9a9b-cc8a480d78a8
+                transform: ""
+          - columnReference:
+              columnCounter: 27e7bb39-4957-426b-8103-33b5c560cef7
+              stepCounter: a1563329-7572-41fa-ae33-1eee28fe6c02
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 782d3700-cd57-4309-99f5-16d56d9e2538
+                    stepCounter: f267ac7b-04dd-4f44-9a9b-cc8a480d78a8
+                transform: ""
+          - columnReference:
+              columnCounter: 6dad0872-4aa8-42d5-b020-d12b6e912b2e
+              stepCounter: a1563329-7572-41fa-ae33-1eee28fe6c02
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dfc93c65-954b-43e2-8f11-9de43fdaa3ac
+                    stepCounter: f267ac7b-04dd-4f44-9a9b-cc8a480d78a8
+                transform: ""
+          - columnReference:
+              columnCounter: 996a5464-c5b2-4b00-85d9-99d1316a7062
+              stepCounter: a1563329-7572-41fa-ae33-1eee28fe6c02
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df6c5fd9-1dcd-4400-9026-8b262a1c6050
+                    stepCounter: f267ac7b-04dd-4f44-9a9b-cc8a480d78a8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP47
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP47') }} "STG_PARTSUPP47"
+            name: STG_PARTSUPP191
+            noLinkRefs: []
+      name: STG_PARTSUPP191
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: a1563329-7572-41fa-ae33-1eee28fe6c02

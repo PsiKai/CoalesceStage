@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP176-a853fe2f-53c5-4014-9230-9a5f9d3b6814:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 27d79cdb-0841-4967-bfb6-0502954d9da4
+              stepCounter: a853fe2f-53c5-4014-9230-9a5f9d3b6814
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b1dfbd12-0328-4126-b2d9-2ff4c4491c56
+                    stepCounter: 7c9001b4-4026-4a1d-8b8c-3e07b826ea64
+                transform: ""
+          - columnReference:
+              columnCounter: 8898165e-c980-4a50-991e-0c9e271625ba
+              stepCounter: a853fe2f-53c5-4014-9230-9a5f9d3b6814
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 608b0169-0962-4418-9fac-30ec53be0bbb
+                    stepCounter: 7c9001b4-4026-4a1d-8b8c-3e07b826ea64
+                transform: ""
+          - columnReference:
+              columnCounter: 1fe2d135-dbf2-45fb-9533-840836f286be
+              stepCounter: a853fe2f-53c5-4014-9230-9a5f9d3b6814
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c9ffaa4d-bb47-403b-a137-6fd92cef6403
+                    stepCounter: 7c9001b4-4026-4a1d-8b8c-3e07b826ea64
+                transform: ""
+          - columnReference:
+              columnCounter: d15a3038-0763-43fb-a68f-cee84c865b3d
+              stepCounter: a853fe2f-53c5-4014-9230-9a5f9d3b6814
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4f2f722-1d91-47f2-b81a-c61b9446af4b
+                    stepCounter: 7c9001b4-4026-4a1d-8b8c-3e07b826ea64
+                transform: ""
+          - columnReference:
+              columnCounter: ebfcc436-3298-4f14-9358-0a4df071749c
+              stepCounter: a853fe2f-53c5-4014-9230-9a5f9d3b6814
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d7da90b-1c17-434c-8aa5-b669ab36c099
+                    stepCounter: 7c9001b4-4026-4a1d-8b8c-3e07b826ea64
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP46
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP46') }} "STG_PARTSUPP46"
+            name: STG_PARTSUPP176
+            noLinkRefs: []
+      name: STG_PARTSUPP176
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: a853fe2f-53c5-4014-9230-9a5f9d3b6814

@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP75-ee7bfdad-ea40-4e71-9101-fc1c7b6c68ca:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: bae6cec5-4eac-4d3f-b9a8-fe2626f60575
+              stepCounter: ee7bfdad-ea40-4e71-9101-fc1c7b6c68ca
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e05151ce-4868-422e-924f-f52d4bdbc13f
+                    stepCounter: 5303d2f4-642c-4e68-a343-1b9594d01a03
+                transform: ""
+          - columnReference:
+              columnCounter: 36b59727-2f71-4e6a-b564-e8b02b9b78f9
+              stepCounter: ee7bfdad-ea40-4e71-9101-fc1c7b6c68ca
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d676389-3cd4-4bf6-bbd1-8c12b520cfcc
+                    stepCounter: 5303d2f4-642c-4e68-a343-1b9594d01a03
+                transform: ""
+          - columnReference:
+              columnCounter: a0f94a56-4149-46d8-b9bc-26e26d298cb6
+              stepCounter: ee7bfdad-ea40-4e71-9101-fc1c7b6c68ca
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b8b274bd-b23d-4c39-a530-1c8d44de22f2
+                    stepCounter: 5303d2f4-642c-4e68-a343-1b9594d01a03
+                transform: ""
+          - columnReference:
+              columnCounter: 04017416-6f35-4195-9a73-4d61f55c38b1
+              stepCounter: ee7bfdad-ea40-4e71-9101-fc1c7b6c68ca
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afac37b3-cfe1-4b7a-8213-cf3c7cd07a50
+                    stepCounter: 5303d2f4-642c-4e68-a343-1b9594d01a03
+                transform: ""
+          - columnReference:
+              columnCounter: 3a1bdb14-ccf8-412e-8c08-8c6de0d8907e
+              stepCounter: ee7bfdad-ea40-4e71-9101-fc1c7b6c68ca
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0fe5b273-852b-4ead-be6f-61e0f91729c9
+                    stepCounter: 5303d2f4-642c-4e68-a343-1b9594d01a03
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP15
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP15') }} "STG_PARTSUPP15"
+            name: STG_PARTSUPP75
+            noLinkRefs: []
+      name: STG_PARTSUPP75
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: ee7bfdad-ea40-4e71-9101-fc1c7b6c68ca

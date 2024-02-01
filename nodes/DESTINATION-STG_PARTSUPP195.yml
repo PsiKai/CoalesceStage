@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP195-e04f1901-6a4d-4e94-a6e6-b8d73032159a:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0a5e6621-c6ca-4221-8c47-93b73042d7c7
+              stepCounter: e04f1901-6a4d-4e94-a6e6-b8d73032159a
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 31f27e60-6c40-408c-b363-701478b64008
+                    stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4
+                transform: ""
+          - columnReference:
+              columnCounter: ae03f46a-bd59-4513-ab2b-bc6b25672f54
+              stepCounter: e04f1901-6a4d-4e94-a6e6-b8d73032159a
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d8dd3562-9c6c-42b3-8726-c0ff4c01935b
+                    stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4
+                transform: ""
+          - columnReference:
+              columnCounter: ac032661-694f-4f02-9cb6-8ddd7ee8a463
+              stepCounter: e04f1901-6a4d-4e94-a6e6-b8d73032159a
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be4ad4b4-b1f7-4706-b5cf-cca3fa937255
+                    stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4
+                transform: ""
+          - columnReference:
+              columnCounter: 866209e2-1a55-4954-b74e-d9c061704c53
+              stepCounter: e04f1901-6a4d-4e94-a6e6-b8d73032159a
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 466daf9a-8f2c-45f5-9033-1806c7563e3a
+                    stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4
+                transform: ""
+          - columnReference:
+              columnCounter: d3322259-1d2f-44eb-8248-5fc280645dcd
+              stepCounter: e04f1901-6a4d-4e94-a6e6-b8d73032159a
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aaa7ec4e-128b-49b9-b459-a08ca0156dda
+                    stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP73
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP73') }} "STG_PARTSUPP73"
+            name: STG_PARTSUPP195
+            noLinkRefs: []
+      name: STG_PARTSUPP195
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: e04f1901-6a4d-4e94-a6e6-b8d73032159a

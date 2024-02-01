@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP219-aa9d1b52-8368-483b-b4e0-7877b6317463:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e6c9b5d0-6546-4661-9bf8-683941333d06
+              stepCounter: aa9d1b52-8368-483b-b4e0-7877b6317463
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d6671cc-a116-408b-9018-e068f6f3b14f
+                    stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222
+                transform: ""
+          - columnReference:
+              columnCounter: 5c6fe15a-45ac-42a8-a169-b2f87db8be42
+              stepCounter: aa9d1b52-8368-483b-b4e0-7877b6317463
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e4bfa7ef-6608-4a47-9a04-d9fbc3b0f838
+                    stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222
+                transform: ""
+          - columnReference:
+              columnCounter: 6ca960d0-d032-4dcc-98c2-89594fac2ed0
+              stepCounter: aa9d1b52-8368-483b-b4e0-7877b6317463
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 232bf5e2-d3d3-42c1-bc96-5bebdbc56810
+                    stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222
+                transform: ""
+          - columnReference:
+              columnCounter: 9ee02d88-e094-4eeb-8b1b-2b5b6255a99b
+              stepCounter: aa9d1b52-8368-483b-b4e0-7877b6317463
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 79fce9f2-d4da-43cd-bcb4-45e16c1db816
+                    stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222
+                transform: ""
+          - columnReference:
+              columnCounter: 67038532-ebbc-4bb4-a770-94ca85602557
+              stepCounter: aa9d1b52-8368-483b-b4e0-7877b6317463
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: faef3384-aa35-4b1a-b677-c07ffa5538ca
+                    stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP112
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP112') }} "STG_PARTSUPP112"
+            name: STG_PARTSUPP219
+            noLinkRefs: []
+      name: STG_PARTSUPP219
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: aa9d1b52-8368-483b-b4e0-7877b6317463

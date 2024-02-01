@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP138-1b2296de-9804-4bc0-903e-3053e0c26f2e:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e0c95ed2-fde8-44e1-a15b-da43fcfa0071
+              stepCounter: 1b2296de-9804-4bc0-903e-3053e0c26f2e
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f9100d5-2944-4d08-bebc-e4641f80a8e2
+                    stepCounter: 41204ace-8132-476c-9145-50dce3f22cd6
+                transform: ""
+          - columnReference:
+              columnCounter: 456865b4-40cf-4247-ae9a-f1b8c76b9300
+              stepCounter: 1b2296de-9804-4bc0-903e-3053e0c26f2e
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17a47a56-1689-42cc-8aae-d6de29f31a18
+                    stepCounter: 41204ace-8132-476c-9145-50dce3f22cd6
+                transform: ""
+          - columnReference:
+              columnCounter: 69b2721e-9e63-41ae-a88d-5af18fae4be6
+              stepCounter: 1b2296de-9804-4bc0-903e-3053e0c26f2e
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26d209cd-8d24-4a02-98cb-660059e2e2ec
+                    stepCounter: 41204ace-8132-476c-9145-50dce3f22cd6
+                transform: ""
+          - columnReference:
+              columnCounter: 13b26fc8-cb62-4f43-913e-c02b23fb4423
+              stepCounter: 1b2296de-9804-4bc0-903e-3053e0c26f2e
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 21512624-8619-4375-bee1-a23d49e93781
+                    stepCounter: 41204ace-8132-476c-9145-50dce3f22cd6
+                transform: ""
+          - columnReference:
+              columnCounter: 7432e511-d02a-4d29-a549-946096dbaeae
+              stepCounter: 1b2296de-9804-4bc0-903e-3053e0c26f2e
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a4fa7c3-e13d-4fa9-98fc-8d41219e23e3
+                    stepCounter: 41204ace-8132-476c-9145-50dce3f22cd6
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP12
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP12') }} "STG_PARTSUPP12"
+            name: STG_PARTSUPP138
+            noLinkRefs: []
+      name: STG_PARTSUPP138
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1b2296de-9804-4bc0-903e-3053e0c26f2e

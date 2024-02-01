@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP216-8348460c-e456-46f8-b0d4-71f78117a836:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 97fe8c8a-afcf-4c6d-aa73-a3594451c08d
+              stepCounter: 8348460c-e456-46f8-b0d4-71f78117a836
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c62e57f0-fb98-45c4-8ed9-551ce23fe538
+                    stepCounter: 7fbb585c-a60e-416e-b39f-25454001d622
+                transform: ""
+          - columnReference:
+              columnCounter: f54d7cb9-c1a7-48e0-be7f-a88ccc396309
+              stepCounter: 8348460c-e456-46f8-b0d4-71f78117a836
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3ca1ddd0-f112-4160-a89d-b3660cf8418c
+                    stepCounter: 7fbb585c-a60e-416e-b39f-25454001d622
+                transform: ""
+          - columnReference:
+              columnCounter: 550d4c19-9530-4ee5-9b69-fb341f8f8463
+              stepCounter: 8348460c-e456-46f8-b0d4-71f78117a836
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a657d31c-ccb8-46d5-8497-c5ef8ed11995
+                    stepCounter: 7fbb585c-a60e-416e-b39f-25454001d622
+                transform: ""
+          - columnReference:
+              columnCounter: 2c44641c-fbc3-407c-982d-433d679656e2
+              stepCounter: 8348460c-e456-46f8-b0d4-71f78117a836
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f42d1c25-8537-4cc7-87ca-45c81b91198d
+                    stepCounter: 7fbb585c-a60e-416e-b39f-25454001d622
+                transform: ""
+          - columnReference:
+              columnCounter: e1a8bdf4-8595-4634-9001-eaf1b1972818
+              stepCounter: 8348460c-e456-46f8-b0d4-71f78117a836
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bb33a1fc-2247-417d-a6b0-4e959b767ad9
+                    stepCounter: 7fbb585c-a60e-416e-b39f-25454001d622
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP77
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP77') }} "STG_PARTSUPP77"
+            name: STG_PARTSUPP216
+            noLinkRefs: []
+      name: STG_PARTSUPP216
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 8348460c-e456-46f8-b0d4-71f78117a836

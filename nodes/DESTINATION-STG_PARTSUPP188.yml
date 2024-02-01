@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP188-45f85141-079f-4cbe-bd83-3eba85bb1eed:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9836e1d5-68d3-4379-9ac3-f2cb38c12fa7
+              stepCounter: 45f85141-079f-4cbe-bd83-3eba85bb1eed
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7026f267-a713-4cba-b1ca-3b9dd01bc568
+                    stepCounter: dc4a7a4e-88b5-4c4f-8ce1-d77f48fd7e5a
+                transform: ""
+          - columnReference:
+              columnCounter: 7a1faaf8-5431-4bdb-bea2-9a87c845e374
+              stepCounter: 45f85141-079f-4cbe-bd83-3eba85bb1eed
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 67ef83a2-dc23-40d1-8650-6021c0ec2c26
+                    stepCounter: dc4a7a4e-88b5-4c4f-8ce1-d77f48fd7e5a
+                transform: ""
+          - columnReference:
+              columnCounter: 49f453e2-665e-4546-b186-4b5bce4957c2
+              stepCounter: 45f85141-079f-4cbe-bd83-3eba85bb1eed
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 58e381de-4a24-4348-a868-1cf967be5534
+                    stepCounter: dc4a7a4e-88b5-4c4f-8ce1-d77f48fd7e5a
+                transform: ""
+          - columnReference:
+              columnCounter: bd9948c8-a24b-431d-b62f-d4b38f02155b
+              stepCounter: 45f85141-079f-4cbe-bd83-3eba85bb1eed
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8a653ae9-6a63-4029-b58b-b14adf2d5100
+                    stepCounter: dc4a7a4e-88b5-4c4f-8ce1-d77f48fd7e5a
+                transform: ""
+          - columnReference:
+              columnCounter: 1ee0fe7b-5b38-4fcc-ac60-c57263fb36d2
+              stepCounter: 45f85141-079f-4cbe-bd83-3eba85bb1eed
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff0a7689-095e-408a-8c5e-918de5a9bf70
+                    stepCounter: dc4a7a4e-88b5-4c4f-8ce1-d77f48fd7e5a
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP49
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP49') }} "STG_PARTSUPP49"
+            name: STG_PARTSUPP188
+            noLinkRefs: []
+      name: STG_PARTSUPP188
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 45f85141-079f-4cbe-bd83-3eba85bb1eed

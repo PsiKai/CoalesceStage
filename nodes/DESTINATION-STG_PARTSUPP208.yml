@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP208-ba0cedc4-eddc-423a-b682-eb5181b38360:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 753f31a5-6dc6-4d72-9d02-c64e7552ecca
+              stepCounter: ba0cedc4-eddc-423a-b682-eb5181b38360
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 42018bde-8b52-44b0-84be-a7f30c1eb969
+                    stepCounter: 631d1de9-d609-46d1-9848-c385667503d0
+                transform: ""
+          - columnReference:
+              columnCounter: 99b02889-9f87-4aa0-907d-c792dbae0a14
+              stepCounter: ba0cedc4-eddc-423a-b682-eb5181b38360
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 79434538-01a3-41bc-8b7f-c80af87bcef1
+                    stepCounter: 631d1de9-d609-46d1-9848-c385667503d0
+                transform: ""
+          - columnReference:
+              columnCounter: 23503d62-7f63-45a6-8fb6-f2ed38d0b2c7
+              stepCounter: ba0cedc4-eddc-423a-b682-eb5181b38360
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6883f821-d39f-4f2d-b962-68ca8097084a
+                    stepCounter: 631d1de9-d609-46d1-9848-c385667503d0
+                transform: ""
+          - columnReference:
+              columnCounter: ca4a09a3-2619-4d61-b323-2e36c679eb5b
+              stepCounter: ba0cedc4-eddc-423a-b682-eb5181b38360
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 05f4b646-c600-481d-9c0e-b07f5ccb765b
+                    stepCounter: 631d1de9-d609-46d1-9848-c385667503d0
+                transform: ""
+          - columnReference:
+              columnCounter: 549d88bf-5051-464a-be9b-16d886824ed5
+              stepCounter: ba0cedc4-eddc-423a-b682-eb5181b38360
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d1e2b912-b0e5-4976-87d8-ff600c053810
+                    stepCounter: 631d1de9-d609-46d1-9848-c385667503d0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP74
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP74') }} "STG_PARTSUPP74"
+            name: STG_PARTSUPP208
+            noLinkRefs: []
+      name: STG_PARTSUPP208
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: ba0cedc4-eddc-423a-b682-eb5181b38360

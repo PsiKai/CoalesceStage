@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP200-c065b79a-ba70-47a8-9ca0-4d8b528054b9:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0b332a93-32bc-426e-aac6-a0f0e4e704c4
+              stepCounter: c065b79a-ba70-47a8-9ca0-4d8b528054b9
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 74c48d5a-7f13-428c-973b-f7379f3895c7
+                    stepCounter: 1f1b0904-138e-410e-ab82-9871442d8c10
+                transform: ""
+          - columnReference:
+              columnCounter: 23cf02c3-52ed-4ec9-ae34-7fd8aa3d3ce5
+              stepCounter: c065b79a-ba70-47a8-9ca0-4d8b528054b9
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b157f9a5-56f4-40b3-833a-6f6e135e53d6
+                    stepCounter: 1f1b0904-138e-410e-ab82-9871442d8c10
+                transform: ""
+          - columnReference:
+              columnCounter: 1dd9ac77-c944-4902-9765-67b143036e1b
+              stepCounter: c065b79a-ba70-47a8-9ca0-4d8b528054b9
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e5db56d-4fbc-41c0-b44f-791dc2dd374c
+                    stepCounter: 1f1b0904-138e-410e-ab82-9871442d8c10
+                transform: ""
+          - columnReference:
+              columnCounter: 529dc147-8335-4dd0-a0cb-ea7a73dfaa8a
+              stepCounter: c065b79a-ba70-47a8-9ca0-4d8b528054b9
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8c436fcb-c055-44d8-9d27-deeee3f83c29
+                    stepCounter: 1f1b0904-138e-410e-ab82-9871442d8c10
+                transform: ""
+          - columnReference:
+              columnCounter: afa7cd6b-3e26-4633-bfeb-b2381f44fd81
+              stepCounter: c065b79a-ba70-47a8-9ca0-4d8b528054b9
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d4ae9b95-049d-4609-9264-9a30b44ce885
+                    stepCounter: 1f1b0904-138e-410e-ab82-9871442d8c10
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP89
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP89') }} "STG_PARTSUPP89"
+            name: STG_PARTSUPP200
+            noLinkRefs: []
+      name: STG_PARTSUPP200
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: c065b79a-ba70-47a8-9ca0-4d8b528054b9

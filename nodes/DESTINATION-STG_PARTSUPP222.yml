@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP222-83a83ee2-afb5-487a-91f6-d0d68ec2c888:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0eb8bc29-778a-422d-adfd-771ad09958fb
+              stepCounter: 83a83ee2-afb5-487a-91f6-d0d68ec2c888
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a66b29c1-1a40-4681-a91e-508592dc67e5
+                    stepCounter: 9f75131a-9b77-4212-aa1a-dd7a9d08f2cc
+                transform: ""
+          - columnReference:
+              columnCounter: a0371633-7fa4-4fd1-a36c-300af78a83ca
+              stepCounter: 83a83ee2-afb5-487a-91f6-d0d68ec2c888
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3acc78e-8d71-4407-8356-4e715b373421
+                    stepCounter: 9f75131a-9b77-4212-aa1a-dd7a9d08f2cc
+                transform: ""
+          - columnReference:
+              columnCounter: fe30a6ed-ec75-4239-a06c-4876108031ac
+              stepCounter: 83a83ee2-afb5-487a-91f6-d0d68ec2c888
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af007e75-021c-4bcf-9c5d-ef0193a00667
+                    stepCounter: 9f75131a-9b77-4212-aa1a-dd7a9d08f2cc
+                transform: ""
+          - columnReference:
+              columnCounter: bb2e9b2e-ef71-4605-a52a-cbe012a3d528
+              stepCounter: 83a83ee2-afb5-487a-91f6-d0d68ec2c888
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 77804c06-9079-464f-8918-9d04a1c0e5f3
+                    stepCounter: 9f75131a-9b77-4212-aa1a-dd7a9d08f2cc
+                transform: ""
+          - columnReference:
+              columnCounter: bee6da0b-73c3-4a71-8c03-cbb948279438
+              stepCounter: 83a83ee2-afb5-487a-91f6-d0d68ec2c888
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2d1c4c09-0219-498c-a608-7c6c47f16e25
+                    stepCounter: 9f75131a-9b77-4212-aa1a-dd7a9d08f2cc
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP68
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP68') }} "STG_PARTSUPP68"
+            name: STG_PARTSUPP222
+            noLinkRefs: []
+      name: STG_PARTSUPP222
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 83a83ee2-afb5-487a-91f6-d0d68ec2c888

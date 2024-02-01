@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP215-83b30530-3c05-4d5c-993c-12041945c606:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ee6f64b5-6532-4808-8b8a-442ce609cc11
+              stepCounter: 83b30530-3c05-4d5c-993c-12041945c606
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9513b558-da47-45a7-964a-e67e29fe5823
+                    stepCounter: 7e823093-cbf3-4562-80dc-e3ba98744818
+                transform: ""
+          - columnReference:
+              columnCounter: e29437e4-169d-4388-a53f-0de949ad9cfa
+              stepCounter: 83b30530-3c05-4d5c-993c-12041945c606
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 277b321b-5505-479b-ba95-afb26ffcec85
+                    stepCounter: 7e823093-cbf3-4562-80dc-e3ba98744818
+                transform: ""
+          - columnReference:
+              columnCounter: 1b4a0282-5c9a-488f-a577-5cf345543dde
+              stepCounter: 83b30530-3c05-4d5c-993c-12041945c606
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d9d84c1-0d1e-409a-9a1d-4c8f917ef878
+                    stepCounter: 7e823093-cbf3-4562-80dc-e3ba98744818
+                transform: ""
+          - columnReference:
+              columnCounter: f306984e-33df-44e4-bfa2-702605a68908
+              stepCounter: 83b30530-3c05-4d5c-993c-12041945c606
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9d57aa98-eb4f-4a11-8b65-b8756a80ae5e
+                    stepCounter: 7e823093-cbf3-4562-80dc-e3ba98744818
+                transform: ""
+          - columnReference:
+              columnCounter: e2a6f028-00a6-43b4-bd4d-a6f032f65413
+              stepCounter: 83b30530-3c05-4d5c-993c-12041945c606
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c8eb757-ca86-47f6-89c8-4d9f535f0161
+                    stepCounter: 7e823093-cbf3-4562-80dc-e3ba98744818
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP67
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP67') }} "STG_PARTSUPP67"
+            name: STG_PARTSUPP215
+            noLinkRefs: []
+      name: STG_PARTSUPP215
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 83b30530-3c05-4d5c-993c-12041945c606

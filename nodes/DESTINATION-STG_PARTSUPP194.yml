@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP194-f49fcb75-cb6a-4204-b77f-1f01c319a63b:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a551d9bd-282a-4fd6-b1b3-5690a8da9673
+              stepCounter: f49fcb75-cb6a-4204-b77f-1f01c319a63b
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 107d8fda-fece-4d46-ad86-4f9202c5c0de
+                    stepCounter: 08998107-0169-4c7c-bb21-c22cbeaf636f
+                transform: ""
+          - columnReference:
+              columnCounter: a6a8c3f1-311b-43f0-899c-b42fcb4e13d4
+              stepCounter: f49fcb75-cb6a-4204-b77f-1f01c319a63b
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7a93caeb-2f99-4f87-95cc-661f56992e31
+                    stepCounter: 08998107-0169-4c7c-bb21-c22cbeaf636f
+                transform: ""
+          - columnReference:
+              columnCounter: 7304a9c3-6797-487b-8fa1-dd05b2a54406
+              stepCounter: f49fcb75-cb6a-4204-b77f-1f01c319a63b
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13bc54a4-aa9d-4d9e-862c-3b4746c022ab
+                    stepCounter: 08998107-0169-4c7c-bb21-c22cbeaf636f
+                transform: ""
+          - columnReference:
+              columnCounter: 93f82e4a-a8bf-49b2-9bc2-0e1220f00b7a
+              stepCounter: f49fcb75-cb6a-4204-b77f-1f01c319a63b
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13ae2127-08eb-4b98-a9b1-b7dbfb874aa1
+                    stepCounter: 08998107-0169-4c7c-bb21-c22cbeaf636f
+                transform: ""
+          - columnReference:
+              columnCounter: e3015898-c1b1-4867-b8e5-c53824c0a8b5
+              stepCounter: f49fcb75-cb6a-4204-b77f-1f01c319a63b
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7e85193c-8b3b-4692-9018-11b79c57a13b
+                    stepCounter: 08998107-0169-4c7c-bb21-c22cbeaf636f
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP92
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP92') }} "STG_PARTSUPP92"
+            name: STG_PARTSUPP194
+            noLinkRefs: []
+      name: STG_PARTSUPP194
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: f49fcb75-cb6a-4204-b77f-1f01c319a63b

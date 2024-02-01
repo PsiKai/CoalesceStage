@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP244-4f54a15a-1603-44f4-9ba6-ccf963ecedba:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ef8ff402-49e3-4715-a528-829fead47552
+              stepCounter: 4f54a15a-1603-44f4-9ba6-ccf963ecedba
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c8d2ed72-a1c7-4705-a818-07789fbc5371
+                    stepCounter: ed5e6d39-a69a-4722-9a2d-446a530038fa
+                transform: ""
+          - columnReference:
+              columnCounter: c13b7602-9913-48f5-8264-53ece99220c2
+              stepCounter: 4f54a15a-1603-44f4-9ba6-ccf963ecedba
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7c3850e1-83b8-4f44-bbd5-a25351dc5aa3
+                    stepCounter: ed5e6d39-a69a-4722-9a2d-446a530038fa
+                transform: ""
+          - columnReference:
+              columnCounter: 20e67b33-d7a6-49d6-bd65-179ce254bb66
+              stepCounter: 4f54a15a-1603-44f4-9ba6-ccf963ecedba
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 761df09f-245d-4409-a889-3c30422c8c18
+                    stepCounter: ed5e6d39-a69a-4722-9a2d-446a530038fa
+                transform: ""
+          - columnReference:
+              columnCounter: 168b189e-1041-4f8e-ae2d-5c03f76dd962
+              stepCounter: 4f54a15a-1603-44f4-9ba6-ccf963ecedba
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 056213f4-b6b1-4d63-bdcd-ee7d635652ed
+                    stepCounter: ed5e6d39-a69a-4722-9a2d-446a530038fa
+                transform: ""
+          - columnReference:
+              columnCounter: 110b6f95-b578-473f-b6fd-f6e03e3d8b72
+              stepCounter: 4f54a15a-1603-44f4-9ba6-ccf963ecedba
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 477741df-8f47-47e2-9e7a-d0aa93b5b8bd
+                    stepCounter: ed5e6d39-a69a-4722-9a2d-446a530038fa
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP103
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP103') }} "STG_PARTSUPP103"
+            name: STG_PARTSUPP244
+            noLinkRefs: []
+      name: STG_PARTSUPP244
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 4f54a15a-1603-44f4-9ba6-ccf963ecedba

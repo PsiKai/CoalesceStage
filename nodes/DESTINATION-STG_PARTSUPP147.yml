@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP147-c6ce98a0-dcb4-4e57-98e9-4baef67f820d:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 8767345e-e04a-4a4c-91fe-51ca6a345d1d
+              stepCounter: c6ce98a0-dcb4-4e57-98e9-4baef67f820d
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7ccd4bac-0211-4edd-8ffd-bd1d056b24cd
+                    stepCounter: 50bf6af3-1e02-4bdc-ad7e-9a3bffa665b7
+                transform: ""
+          - columnReference:
+              columnCounter: cd3b9392-4b91-411c-9b50-c918cb42a9ac
+              stepCounter: c6ce98a0-dcb4-4e57-98e9-4baef67f820d
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8335d010-0101-421b-bf5f-afb8adb97871
+                    stepCounter: 50bf6af3-1e02-4bdc-ad7e-9a3bffa665b7
+                transform: ""
+          - columnReference:
+              columnCounter: 3d5a7430-6093-47dd-9f23-5651bffc1c5e
+              stepCounter: c6ce98a0-dcb4-4e57-98e9-4baef67f820d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e6e1e21-defa-4c43-9410-e25dba9ba9e2
+                    stepCounter: 50bf6af3-1e02-4bdc-ad7e-9a3bffa665b7
+                transform: ""
+          - columnReference:
+              columnCounter: 32afee99-7861-4ae4-ae2c-bfaf2e105ae5
+              stepCounter: c6ce98a0-dcb4-4e57-98e9-4baef67f820d
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14354589-847d-4f23-a2de-a224c0a4f4e9
+                    stepCounter: 50bf6af3-1e02-4bdc-ad7e-9a3bffa665b7
+                transform: ""
+          - columnReference:
+              columnCounter: cb5a8c39-3fe0-4ec9-9cf0-0d46cf509100
+              stepCounter: c6ce98a0-dcb4-4e57-98e9-4baef67f820d
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d575272-d11d-4eff-95a7-418b1ff721b6
+                    stepCounter: 50bf6af3-1e02-4bdc-ad7e-9a3bffa665b7
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP25
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP25') }} "STG_PARTSUPP25"
+            name: STG_PARTSUPP147
+            noLinkRefs: []
+      name: STG_PARTSUPP147
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: c6ce98a0-dcb4-4e57-98e9-4baef67f820d

@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP204-884bfe0d-ba3b-42f3-8e73-7d99e3fef691:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 5f74e878-e47c-43c9-ab52-665d44e01efb
+              stepCounter: 884bfe0d-ba3b-42f3-8e73-7d99e3fef691
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2af21383-b5a8-4fc4-abbb-f10d1633e768
+                    stepCounter: 37ccf9b5-74fe-4ac8-9fea-e8aa6a164605
+                transform: ""
+          - columnReference:
+              columnCounter: c551e926-f9be-47b9-a23c-d0ac3dd0e236
+              stepCounter: 884bfe0d-ba3b-42f3-8e73-7d99e3fef691
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f840fe8-cc23-4552-bbf4-8e39d4bace86
+                    stepCounter: 37ccf9b5-74fe-4ac8-9fea-e8aa6a164605
+                transform: ""
+          - columnReference:
+              columnCounter: 6ce45bdf-d342-45ae-8b0a-af66630998ce
+              stepCounter: 884bfe0d-ba3b-42f3-8e73-7d99e3fef691
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69450e72-a90f-44c4-a58d-54674b98bb3d
+                    stepCounter: 37ccf9b5-74fe-4ac8-9fea-e8aa6a164605
+                transform: ""
+          - columnReference:
+              columnCounter: 2760b7e4-d54f-4b64-a433-f9fb4d935cf8
+              stepCounter: 884bfe0d-ba3b-42f3-8e73-7d99e3fef691
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 983fceeb-372d-47a1-8ac1-6dd8b3605c6f
+                    stepCounter: 37ccf9b5-74fe-4ac8-9fea-e8aa6a164605
+                transform: ""
+          - columnReference:
+              columnCounter: f571a13b-5ed7-44b6-9f3f-556e716aab52
+              stepCounter: 884bfe0d-ba3b-42f3-8e73-7d99e3fef691
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ecf94dcf-c7a9-461f-9ad1-21473a65e5a5
+                    stepCounter: 37ccf9b5-74fe-4ac8-9fea-e8aa6a164605
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP66
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP66') }} "STG_PARTSUPP66"
+            name: STG_PARTSUPP204
+            noLinkRefs: []
+      name: STG_PARTSUPP204
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 884bfe0d-ba3b-42f3-8e73-7d99e3fef691

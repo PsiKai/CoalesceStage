@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP131-1c5e149b-1437-4d29-912b-57d419d3bedf:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: bf27371a-3c1a-47a2-a38d-1385cec5d1ae
+              stepCounter: 1c5e149b-1437-4d29-912b-57d419d3bedf
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bae2c2db-846f-4d51-8b30-79cc60a09dc9
+                    stepCounter: 849a0b38-0dc3-4082-93da-a8653beeaa48
+                transform: ""
+          - columnReference:
+              columnCounter: a2cd9910-89f1-40fa-89bd-dc4d8f589d60
+              stepCounter: 1c5e149b-1437-4d29-912b-57d419d3bedf
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d148ea92-3050-4699-b485-c4e028192950
+                    stepCounter: 849a0b38-0dc3-4082-93da-a8653beeaa48
+                transform: ""
+          - columnReference:
+              columnCounter: d7f98967-9c77-45f0-be3e-b77fbd34072f
+              stepCounter: 1c5e149b-1437-4d29-912b-57d419d3bedf
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: faf62d13-0cf9-4bc7-a298-e15dce0548f4
+                    stepCounter: 849a0b38-0dc3-4082-93da-a8653beeaa48
+                transform: ""
+          - columnReference:
+              columnCounter: 87a496ae-5c06-47a8-be56-0884e342c5ae
+              stepCounter: 1c5e149b-1437-4d29-912b-57d419d3bedf
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e83329f-e9e7-4576-abee-31dbfa92cd47
+                    stepCounter: 849a0b38-0dc3-4082-93da-a8653beeaa48
+                transform: ""
+          - columnReference:
+              columnCounter: f6dd918d-94b8-4869-bf9d-9b1e92518e1c
+              stepCounter: 1c5e149b-1437-4d29-912b-57d419d3bedf
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5c5ca636-18c7-424b-9425-d6585dca3ead
+                    stepCounter: 849a0b38-0dc3-4082-93da-a8653beeaa48
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP2
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP2') }} "STG_PARTSUPP2"
+            name: STG_PARTSUPP131
+            noLinkRefs: []
+      name: STG_PARTSUPP131
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1c5e149b-1437-4d29-912b-57d419d3bedf

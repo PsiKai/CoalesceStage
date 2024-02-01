@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP170-9db225e2-f4f1-4938-8069-caf623523b83:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3254b2c4-0c60-4b4f-a36e-1ff059612cdd
+              stepCounter: 9db225e2-f4f1-4938-8069-caf623523b83
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1eff39e0-28b9-421c-9d26-c7826b6e1d77
+                    stepCounter: 5bb03112-292f-4dab-bf20-cbefed938630
+                transform: ""
+          - columnReference:
+              columnCounter: 3dac1bca-6f8e-457f-b177-6f439c232dec
+              stepCounter: 9db225e2-f4f1-4938-8069-caf623523b83
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 380a5271-68c2-45f7-87b7-2a192e2e8142
+                    stepCounter: 5bb03112-292f-4dab-bf20-cbefed938630
+                transform: ""
+          - columnReference:
+              columnCounter: 25c48906-b17d-4a80-b529-e54d2249f4b4
+              stepCounter: 9db225e2-f4f1-4938-8069-caf623523b83
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e24d2393-5b26-435d-8a96-7b9257a02a5d
+                    stepCounter: 5bb03112-292f-4dab-bf20-cbefed938630
+                transform: ""
+          - columnReference:
+              columnCounter: 1be9edf0-d82f-41c7-813c-34efab1ec071
+              stepCounter: 9db225e2-f4f1-4938-8069-caf623523b83
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: baff6934-1d7e-4944-ba3c-36cc5c0cdd9d
+                    stepCounter: 5bb03112-292f-4dab-bf20-cbefed938630
+                transform: ""
+          - columnReference:
+              columnCounter: 2b1dd3ed-151a-4ef5-90bb-9f50ceb3d223
+              stepCounter: 9db225e2-f4f1-4938-8069-caf623523b83
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14679104-3ae6-4959-a89c-0ecf2eb41330
+                    stepCounter: 5bb03112-292f-4dab-bf20-cbefed938630
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP54
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP54') }} "STG_PARTSUPP54"
+            name: STG_PARTSUPP170
+            noLinkRefs: []
+      name: STG_PARTSUPP170
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 9db225e2-f4f1-4938-8069-caf623523b83

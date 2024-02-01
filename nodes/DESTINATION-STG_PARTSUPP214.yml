@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP214-658a13c3-51bc-4a02-aa98-7aaab8caa57b:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d0c4e198-d6f4-4f45-aa64-862ed857ce49
+              stepCounter: 658a13c3-51bc-4a02-aa98-7aaab8caa57b
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e784de02-19c2-4c46-a9fd-cf0f08cb21da
+                    stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
+                transform: ""
+          - columnReference:
+              columnCounter: 887debab-ab2e-4d29-992c-4661218ce6ad
+              stepCounter: 658a13c3-51bc-4a02-aa98-7aaab8caa57b
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: db5e1dd1-830e-4b24-9b34-8dccda0c55c6
+                    stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
+                transform: ""
+          - columnReference:
+              columnCounter: bee8b0f9-83a8-416f-bd53-9c0f7cd2c341
+              stepCounter: 658a13c3-51bc-4a02-aa98-7aaab8caa57b
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7dd327d-75d8-47f8-bbd2-c4471237200b
+                    stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
+                transform: ""
+          - columnReference:
+              columnCounter: 5b7a04ab-5fdf-478f-a15f-bc0b1acaa684
+              stepCounter: 658a13c3-51bc-4a02-aa98-7aaab8caa57b
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d66a18f7-410a-4663-ad4a-1d564c88d586
+                    stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
+                transform: ""
+          - columnReference:
+              columnCounter: 33fa4198-6050-4748-9713-623609e06610
+              stepCounter: 658a13c3-51bc-4a02-aa98-7aaab8caa57b
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2614fbf0-0671-40e7-b8c6-40b73a08e208
+                    stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP96
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP96') }} "STG_PARTSUPP96"
+            name: STG_PARTSUPP214
+            noLinkRefs: []
+      name: STG_PARTSUPP214
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 658a13c3-51bc-4a02-aa98-7aaab8caa57b

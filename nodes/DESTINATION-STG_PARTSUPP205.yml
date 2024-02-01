@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP205-97c4f69c-ad9c-45ee-84e1-d623d34ff045:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 304fa61b-aded-45e3-8755-45ebc7545cef
+              stepCounter: 97c4f69c-ad9c-45ee-84e1-d623d34ff045
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cf133db9-8056-421c-96ba-54a6299f6a92
+                    stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3
+                transform: ""
+          - columnReference:
+              columnCounter: d51c8d76-e973-4e50-9cdd-dfc1cdca5d12
+              stepCounter: 97c4f69c-ad9c-45ee-84e1-d623d34ff045
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 67831039-d8e0-4c69-b113-3320fc0dbb82
+                    stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3
+                transform: ""
+          - columnReference:
+              columnCounter: 53152a54-5282-4d26-bd6d-f98501e72f53
+              stepCounter: 97c4f69c-ad9c-45ee-84e1-d623d34ff045
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 15d0aceb-c2ad-441b-bff9-ea9152be6ee4
+                    stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3
+                transform: ""
+          - columnReference:
+              columnCounter: a2daae3d-d081-4c50-8dbf-d534e4a149e4
+              stepCounter: 97c4f69c-ad9c-45ee-84e1-d623d34ff045
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1f9408a9-edd8-4f7f-98b4-7ff99c2e0dae
+                    stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3
+                transform: ""
+          - columnReference:
+              columnCounter: 051ce33a-e4c9-4aef-8dfb-f480d3ce3fd1
+              stepCounter: 97c4f69c-ad9c-45ee-84e1-d623d34ff045
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f63f8634-a5b8-44b1-bd55-39eac231d47f
+                    stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP83
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP83') }} "STG_PARTSUPP83"
+            name: STG_PARTSUPP205
+            noLinkRefs: []
+      name: STG_PARTSUPP205
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 97c4f69c-ad9c-45ee-84e1-d623d34ff045

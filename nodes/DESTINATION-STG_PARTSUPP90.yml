@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP90-d7067d15-5ba5-42ff-a906-8544d43b1fed:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d9b970ed-bd19-41e6-a030-34e4ba4c143e
+              stepCounter: d7067d15-5ba5-42ff-a906-8544d43b1fed
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: da7fb526-ba1d-4d78-863c-868000e97e1c
+                    stepCounter: e582cb11-8167-44fa-b019-5ea90ee1366c
+                transform: ""
+          - columnReference:
+              columnCounter: 2a3f601a-f104-474d-8d81-cfcd6e91e25f
+              stepCounter: d7067d15-5ba5-42ff-a906-8544d43b1fed
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f045792-c042-4306-8345-17530dd4408e
+                    stepCounter: e582cb11-8167-44fa-b019-5ea90ee1366c
+                transform: ""
+          - columnReference:
+              columnCounter: 641cb297-e4fc-44c3-a168-3cb1889e3004
+              stepCounter: d7067d15-5ba5-42ff-a906-8544d43b1fed
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0beac5ea-3462-48c2-af16-db5eb567ce7a
+                    stepCounter: e582cb11-8167-44fa-b019-5ea90ee1366c
+                transform: ""
+          - columnReference:
+              columnCounter: 835fc8c9-66b1-46f0-8aca-03fc17e45a49
+              stepCounter: d7067d15-5ba5-42ff-a906-8544d43b1fed
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f83e65a6-fe7a-4a9f-b802-2a453d963ee8
+                    stepCounter: e582cb11-8167-44fa-b019-5ea90ee1366c
+                transform: ""
+          - columnReference:
+              columnCounter: 2d85a460-3646-4769-8cf9-3b44363b89d3
+              stepCounter: d7067d15-5ba5-42ff-a906-8544d43b1fed
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 821710a4-dadd-4811-810b-df5d729da9bb
+                    stepCounter: e582cb11-8167-44fa-b019-5ea90ee1366c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP21
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP21') }} "STG_PARTSUPP21"
+            name: STG_PARTSUPP90
+            noLinkRefs: []
+      name: STG_PARTSUPP90
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: d7067d15-5ba5-42ff-a906-8544d43b1fed

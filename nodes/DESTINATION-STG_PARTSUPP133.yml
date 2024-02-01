@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP133-1918f3d0-30ca-40bb-a9dd-21d58dfad8af:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f2cb6175-d29d-498b-a1e4-b2a448073561
+              stepCounter: 1918f3d0-30ca-40bb-a9dd-21d58dfad8af
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 77a51120-0310-480e-ace7-8beb51d64203
+                    stepCounter: 6010424c-c8f3-4f33-bebb-c3ccf7da2779
+                transform: ""
+          - columnReference:
+              columnCounter: c817ad6e-1905-4d0a-aba8-084f9093e934
+              stepCounter: 1918f3d0-30ca-40bb-a9dd-21d58dfad8af
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eef2b448-49a9-47c2-934f-c86e48ead8b2
+                    stepCounter: 6010424c-c8f3-4f33-bebb-c3ccf7da2779
+                transform: ""
+          - columnReference:
+              columnCounter: 793fd51e-8a3b-4a3b-aa02-727fb8d5d970
+              stepCounter: 1918f3d0-30ca-40bb-a9dd-21d58dfad8af
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fdd9fe8c-ec30-47f8-a08f-ec6622ce76c1
+                    stepCounter: 6010424c-c8f3-4f33-bebb-c3ccf7da2779
+                transform: ""
+          - columnReference:
+              columnCounter: 4e323c95-3790-491c-a2ed-5480f5dbb0fe
+              stepCounter: 1918f3d0-30ca-40bb-a9dd-21d58dfad8af
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d23a8481-979b-40c7-bd24-478b4dc675cd
+                    stepCounter: 6010424c-c8f3-4f33-bebb-c3ccf7da2779
+                transform: ""
+          - columnReference:
+              columnCounter: 114f234b-dfc4-4b7d-a36f-080632eaa401
+              stepCounter: 1918f3d0-30ca-40bb-a9dd-21d58dfad8af
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 134e2511-19b1-4d83-8268-7d50e24b2bef
+                    stepCounter: 6010424c-c8f3-4f33-bebb-c3ccf7da2779
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP6
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP6') }} "STG_PARTSUPP6"
+            name: STG_PARTSUPP133
+            noLinkRefs: []
+      name: STG_PARTSUPP133
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1918f3d0-30ca-40bb-a9dd-21d58dfad8af

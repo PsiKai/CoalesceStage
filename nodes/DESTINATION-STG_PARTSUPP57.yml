@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP57-d8f416ec-40c6-4700-82ba-a38b148fa6bc:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 76dd7372-b55e-47d7-9482-6f077b9e0e50
+              stepCounter: d8f416ec-40c6-4700-82ba-a38b148fa6bc
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d745fb33-9bd1-41e8-a954-0bd4533dad52
+                    stepCounter: c4169f6b-b76d-4374-ba82-8c7829408b20
+                transform: ""
+          - columnReference:
+              columnCounter: 3e67db31-1b7a-49c1-9cff-665bd2f754f2
+              stepCounter: d8f416ec-40c6-4700-82ba-a38b148fa6bc
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 992cf774-21f3-44ed-a171-929ca1ea8f0e
+                    stepCounter: c4169f6b-b76d-4374-ba82-8c7829408b20
+                transform: ""
+          - columnReference:
+              columnCounter: 20a4b7c7-f182-42f0-89db-e409a37748b9
+              stepCounter: d8f416ec-40c6-4700-82ba-a38b148fa6bc
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a2c8b30-4210-49cf-b723-262fae60c180
+                    stepCounter: c4169f6b-b76d-4374-ba82-8c7829408b20
+                transform: ""
+          - columnReference:
+              columnCounter: ee2c2e1d-8c0b-4707-ae7a-6951e9b171f5
+              stepCounter: d8f416ec-40c6-4700-82ba-a38b148fa6bc
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2788e37c-6d43-4c2c-bb0b-1d630a911ec7
+                    stepCounter: c4169f6b-b76d-4374-ba82-8c7829408b20
+                transform: ""
+          - columnReference:
+              columnCounter: 6ac0e9d1-e963-449f-850a-76e57ea1784a
+              stepCounter: d8f416ec-40c6-4700-82ba-a38b148fa6bc
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 88cccbac-6c1f-4f74-8e74-4c382f2fa55b
+                    stepCounter: c4169f6b-b76d-4374-ba82-8c7829408b20
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP24
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP24') }} "STG_PARTSUPP24"
+            name: STG_PARTSUPP57
+            noLinkRefs: []
+      name: STG_PARTSUPP57
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: d8f416ec-40c6-4700-82ba-a38b148fa6bc

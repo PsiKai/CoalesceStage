@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP217-55b99cab-14c0-446c-8adc-e7a018825a0d:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 58698fe9-d3d5-42b5-89fa-ec87b3520f1d
+              stepCounter: 55b99cab-14c0-446c-8adc-e7a018825a0d
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df45b737-8938-41fd-8c2b-ac85d3410f94
+                    stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9
+                transform: ""
+          - columnReference:
+              columnCounter: 60733b14-f032-45ba-a197-63e502d9fe86
+              stepCounter: 55b99cab-14c0-446c-8adc-e7a018825a0d
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7e64afdc-1008-4d9a-8bf5-cdf66ed44efb
+                    stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9
+                transform: ""
+          - columnReference:
+              columnCounter: b48ecf00-0932-43e7-8408-f5d004557401
+              stepCounter: 55b99cab-14c0-446c-8adc-e7a018825a0d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ed83633e-4aef-466a-ab70-bfac82053f70
+                    stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9
+                transform: ""
+          - columnReference:
+              columnCounter: 836b75b9-0f9b-4d17-991c-3d98e2ac17d4
+              stepCounter: 55b99cab-14c0-446c-8adc-e7a018825a0d
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4a68e6d-cf9f-4b57-a1a4-82dfbed150f6
+                    stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9
+                transform: ""
+          - columnReference:
+              columnCounter: 8981778a-efd9-43af-a091-714b49a51e5a
+              stepCounter: 55b99cab-14c0-446c-8adc-e7a018825a0d
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 31784ae1-7d71-4fdf-b708-9b7facc2624b
+                    stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP113
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP113') }} "STG_PARTSUPP113"
+            name: STG_PARTSUPP217
+            noLinkRefs: []
+      name: STG_PARTSUPP217
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 55b99cab-14c0-446c-8adc-e7a018825a0d

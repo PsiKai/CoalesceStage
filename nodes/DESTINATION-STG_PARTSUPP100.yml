@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP100-f9dbea0b-e075-494b-895b-9fbaf62b354b:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b6363826-6821-4f27-9167-46e60ce64110
+              stepCounter: f9dbea0b-e075-494b-895b-9fbaf62b354b
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: de221773-abb0-43f7-94c9-d3046dac038b
+                    stepCounter: 359f77c6-30ac-4930-9ebc-c81c2c2c3f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 9e5e7b46-6679-4a2d-a334-7b05b894afaa
+              stepCounter: f9dbea0b-e075-494b-895b-9fbaf62b354b
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e3966b2a-052f-477e-9e84-bfa65f505d88
+                    stepCounter: 359f77c6-30ac-4930-9ebc-c81c2c2c3f1e
+                transform: ""
+          - columnReference:
+              columnCounter: e7c8f751-ab9a-45e9-b3e3-b81958681a48
+              stepCounter: f9dbea0b-e075-494b-895b-9fbaf62b354b
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2cb6ff35-3f1a-4115-bf44-3231aa4a91f5
+                    stepCounter: 359f77c6-30ac-4930-9ebc-c81c2c2c3f1e
+                transform: ""
+          - columnReference:
+              columnCounter: ffd6886a-7a3f-43b0-b50b-648f7ee359d8
+              stepCounter: f9dbea0b-e075-494b-895b-9fbaf62b354b
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59ca7c94-22b9-47c8-be1b-e09ebf721cc2
+                    stepCounter: 359f77c6-30ac-4930-9ebc-c81c2c2c3f1e
+                transform: ""
+          - columnReference:
+              columnCounter: 7a550ac8-36e7-445b-bc3b-f6d76d709492
+              stepCounter: f9dbea0b-e075-494b-895b-9fbaf62b354b
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c933f171-c50c-46b4-9429-7c772ec58299
+                    stepCounter: 359f77c6-30ac-4930-9ebc-c81c2c2c3f1e
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP55
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP55') }} "STG_PARTSUPP55"
+            name: STG_PARTSUPP100
+            noLinkRefs: []
+      name: STG_PARTSUPP100
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: f9dbea0b-e075-494b-895b-9fbaf62b354b

@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP161-73c9d5ab-cb9b-4283-821e-e3659e0cfec3:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4bab769e-b5c0-49f1-b5fa-226f7c5af72c
+              stepCounter: 73c9d5ab-cb9b-4283-821e-e3659e0cfec3
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc8a0f2f-54f9-4d5c-841d-956034b08b2b
+                    stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa
+                transform: ""
+          - columnReference:
+              columnCounter: 717346a4-0d9a-409b-b8c8-b100e0bb38bb
+              stepCounter: 73c9d5ab-cb9b-4283-821e-e3659e0cfec3
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11feace3-9a2c-40d8-b3f1-b799104a50d2
+                    stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa
+                transform: ""
+          - columnReference:
+              columnCounter: 26eb2446-f422-4e59-9c43-9c13ba7db874
+              stepCounter: 73c9d5ab-cb9b-4283-821e-e3659e0cfec3
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9ff44862-3ba9-433b-a8ad-8eab95f44811
+                    stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa
+                transform: ""
+          - columnReference:
+              columnCounter: 1eb37a87-dca4-4a6b-9e64-0819a6caa499
+              stepCounter: 73c9d5ab-cb9b-4283-821e-e3659e0cfec3
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a595787f-75f7-4448-8d86-40ec4723309e
+                    stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa
+                transform: ""
+          - columnReference:
+              columnCounter: 843d3469-f983-4e69-af28-469c29693362
+              stepCounter: 73c9d5ab-cb9b-4283-821e-e3659e0cfec3
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34517e36-3a7f-4a90-88c2-82ccf071ede5
+                    stepCounter: 1479dbc6-5a3d-47d9-9097-a7b9c6c534fa
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP43
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP43') }} "STG_PARTSUPP43"
+            name: STG_PARTSUPP161
+            noLinkRefs: []
+      name: STG_PARTSUPP161
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 73c9d5ab-cb9b-4283-821e-e3659e0cfec3

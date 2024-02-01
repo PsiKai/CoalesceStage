@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP83-3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: cf133db9-8056-421c-96ba-54a6299f6a92
+              stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7ccd4bac-0211-4edd-8ffd-bd1d056b24cd
+                    stepCounter: 50bf6af3-1e02-4bdc-ad7e-9a3bffa665b7
+                transform: ""
+          - columnReference:
+              columnCounter: 67831039-d8e0-4c69-b113-3320fc0dbb82
+              stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8335d010-0101-421b-bf5f-afb8adb97871
+                    stepCounter: 50bf6af3-1e02-4bdc-ad7e-9a3bffa665b7
+                transform: ""
+          - columnReference:
+              columnCounter: 15d0aceb-c2ad-441b-bff9-ea9152be6ee4
+              stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e6e1e21-defa-4c43-9410-e25dba9ba9e2
+                    stepCounter: 50bf6af3-1e02-4bdc-ad7e-9a3bffa665b7
+                transform: ""
+          - columnReference:
+              columnCounter: 1f9408a9-edd8-4f7f-98b4-7ff99c2e0dae
+              stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14354589-847d-4f23-a2de-a224c0a4f4e9
+                    stepCounter: 50bf6af3-1e02-4bdc-ad7e-9a3bffa665b7
+                transform: ""
+          - columnReference:
+              columnCounter: f63f8634-a5b8-44b1-bd55-39eac231d47f
+              stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d575272-d11d-4eff-95a7-418b1ff721b6
+                    stepCounter: 50bf6af3-1e02-4bdc-ad7e-9a3bffa665b7
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP25
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP25') }} "STG_PARTSUPP25"
+            name: STG_PARTSUPP83
+            noLinkRefs: []
+      name: STG_PARTSUPP83
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 3b7c0de9-4af2-4cd6-a1e6-2dcd179d88d3

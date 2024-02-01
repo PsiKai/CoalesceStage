@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP150-b9ced2d9-5c53-4b50-8bb4-ec80dbeb64ae:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a3d60e34-72ca-46e8-adcc-6ff85b851b87
+              stepCounter: b9ced2d9-5c53-4b50-8bb4-ec80dbeb64ae
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b1ab6d4-e9f6-4c14-ac3a-2453e3fdc90c
+                    stepCounter: 8fea5789-2458-4018-b92e-e25c82159895
+                transform: ""
+          - columnReference:
+              columnCounter: ef01d6bf-66d6-4048-a009-1ac692c2eb04
+              stepCounter: b9ced2d9-5c53-4b50-8bb4-ec80dbeb64ae
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 936bcacb-fc16-4958-954b-654ab94e75bd
+                    stepCounter: 8fea5789-2458-4018-b92e-e25c82159895
+                transform: ""
+          - columnReference:
+              columnCounter: ecd93303-5bac-4cfb-9cbf-dff460caa56f
+              stepCounter: b9ced2d9-5c53-4b50-8bb4-ec80dbeb64ae
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ab52c6fc-9776-406b-a541-0769591b97a2
+                    stepCounter: 8fea5789-2458-4018-b92e-e25c82159895
+                transform: ""
+          - columnReference:
+              columnCounter: 880ec4fb-77c8-4fdf-bf5f-410e6f1ee51e
+              stepCounter: b9ced2d9-5c53-4b50-8bb4-ec80dbeb64ae
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 774bb56e-9246-4163-911e-c9635c923106
+                    stepCounter: 8fea5789-2458-4018-b92e-e25c82159895
+                transform: ""
+          - columnReference:
+              columnCounter: c23b1261-c112-432c-8ff6-11a81da12b6b
+              stepCounter: b9ced2d9-5c53-4b50-8bb4-ec80dbeb64ae
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7ce19384-7883-4b41-9368-6c31f14976dd
+                    stepCounter: 8fea5789-2458-4018-b92e-e25c82159895
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP29
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP29') }} "STG_PARTSUPP29"
+            name: STG_PARTSUPP150
+            noLinkRefs: []
+      name: STG_PARTSUPP150
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: b9ced2d9-5c53-4b50-8bb4-ec80dbeb64ae

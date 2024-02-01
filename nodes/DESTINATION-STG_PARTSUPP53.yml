@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP53-008681da-022f-40fb-9754-4059259e26ee:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4a1ea2ac-25ab-4a46-b3bb-a7a0bd0a9411
+              stepCounter: 008681da-022f-40fb-9754-4059259e26ee
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4eb9c499-33bb-4316-9b3b-fad0bc005640
+                    stepCounter: 7bb27230-a8fe-47fe-aede-975b599229eb
+                transform: ""
+          - columnReference:
+              columnCounter: 6bd642c3-9c76-4245-a3b9-69ca4493c3b4
+              stepCounter: 008681da-022f-40fb-9754-4059259e26ee
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2531ab95-e44d-42f3-a1df-f08f036975c0
+                    stepCounter: 7bb27230-a8fe-47fe-aede-975b599229eb
+                transform: ""
+          - columnReference:
+              columnCounter: fa82c553-208a-48cb-bd96-c4d7e96657a5
+              stepCounter: 008681da-022f-40fb-9754-4059259e26ee
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c5505096-dce3-4f63-b165-ec31219ad3e0
+                    stepCounter: 7bb27230-a8fe-47fe-aede-975b599229eb
+                transform: ""
+          - columnReference:
+              columnCounter: f21cd9b1-b81c-4ecd-978e-c97987159328
+              stepCounter: 008681da-022f-40fb-9754-4059259e26ee
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dfbaeec0-96ad-47bb-9eb3-c0b4dcf5b683
+                    stepCounter: 7bb27230-a8fe-47fe-aede-975b599229eb
+                transform: ""
+          - columnReference:
+              columnCounter: 12f11893-f899-4ab0-9b85-0583de701fb2
+              stepCounter: 008681da-022f-40fb-9754-4059259e26ee
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ccd6cae0-9157-4d6b-a991-f9c5060aa221
+                    stepCounter: 7bb27230-a8fe-47fe-aede-975b599229eb
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP30
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP30') }} "STG_PARTSUPP30"
+            name: STG_PARTSUPP53
+            noLinkRefs: []
+      name: STG_PARTSUPP53
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 008681da-022f-40fb-9754-4059259e26ee

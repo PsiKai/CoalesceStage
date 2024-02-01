@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP157-a0d966b7-6143-41e8-97a4-c5fbdcd566f2:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0e2e56ba-3a9d-43b3-bedd-abe90bf634ff
+              stepCounter: a0d966b7-6143-41e8-97a4-c5fbdcd566f2
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6aa66251-37e2-4b6e-b12c-9751c8a32ac7
+                    stepCounter: efbe6b1b-a449-47e7-98ec-39c80a3aa538
+                transform: ""
+          - columnReference:
+              columnCounter: 7a9efe25-d579-4927-8bcf-44dbd714d3e5
+              stepCounter: a0d966b7-6143-41e8-97a4-c5fbdcd566f2
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ad926d40-c0b4-43ba-ab7c-d6c816ac5e01
+                    stepCounter: efbe6b1b-a449-47e7-98ec-39c80a3aa538
+                transform: ""
+          - columnReference:
+              columnCounter: 55baa7ff-828d-48a2-a85e-c56058dc7ede
+              stepCounter: a0d966b7-6143-41e8-97a4-c5fbdcd566f2
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3494c44-f114-4167-bcbf-6348c826509e
+                    stepCounter: efbe6b1b-a449-47e7-98ec-39c80a3aa538
+                transform: ""
+          - columnReference:
+              columnCounter: fa22a3af-44ce-4522-a466-da561f6f5b52
+              stepCounter: a0d966b7-6143-41e8-97a4-c5fbdcd566f2
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a0d771b-0bf5-447f-bc00-b2a699ba1e4b
+                    stepCounter: efbe6b1b-a449-47e7-98ec-39c80a3aa538
+                transform: ""
+          - columnReference:
+              columnCounter: e9da90b9-d8ab-48aa-a43d-110f9ed8a870
+              stepCounter: a0d966b7-6143-41e8-97a4-c5fbdcd566f2
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 27d50171-bedd-41a4-afd4-be7ce87a86c1
+                    stepCounter: efbe6b1b-a449-47e7-98ec-39c80a3aa538
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP22
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP22') }} "STG_PARTSUPP22"
+            name: STG_PARTSUPP157
+            noLinkRefs: []
+      name: STG_PARTSUPP157
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: a0d966b7-6143-41e8-97a4-c5fbdcd566f2

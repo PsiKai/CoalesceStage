@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP193-cad55dc4-75ac-4969-8298-4d443c64699b:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9145c469-5434-4fdd-a7ba-b11ce45c7dbc
+              stepCounter: cad55dc4-75ac-4969-8298-4d443c64699b
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 24bd5cf8-e9ef-4ba0-af86-74f49634b7df
+                    stepCounter: 05e4765b-8c58-4513-a3a1-63d68235626b
+                transform: ""
+          - columnReference:
+              columnCounter: 59317b2d-32c7-4654-aac8-1a159a5a91b9
+              stepCounter: cad55dc4-75ac-4969-8298-4d443c64699b
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ba455c62-433b-44aa-9312-07cdaa471c91
+                    stepCounter: 05e4765b-8c58-4513-a3a1-63d68235626b
+                transform: ""
+          - columnReference:
+              columnCounter: a9087c4e-6021-4104-93ed-3662b351a288
+              stepCounter: cad55dc4-75ac-4969-8298-4d443c64699b
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e045e37d-46ab-4623-a669-5d35820988a8
+                    stepCounter: 05e4765b-8c58-4513-a3a1-63d68235626b
+                transform: ""
+          - columnReference:
+              columnCounter: 895f916d-3c4b-4863-8b6a-7fb52892b8e2
+              stepCounter: cad55dc4-75ac-4969-8298-4d443c64699b
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eb21cc26-b309-4cec-829c-c94dc7b63b6f
+                    stepCounter: 05e4765b-8c58-4513-a3a1-63d68235626b
+                transform: ""
+          - columnReference:
+              columnCounter: 7124ac7b-1aaf-4d1f-8d67-60c374f3f6a9
+              stepCounter: cad55dc4-75ac-4969-8298-4d443c64699b
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38f88908-a098-48ff-af3b-8db75252288b
+                    stepCounter: 05e4765b-8c58-4513-a3a1-63d68235626b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP93
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP93') }} "STG_PARTSUPP93"
+            name: STG_PARTSUPP193
+            noLinkRefs: []
+      name: STG_PARTSUPP193
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: cad55dc4-75ac-4969-8298-4d443c64699b

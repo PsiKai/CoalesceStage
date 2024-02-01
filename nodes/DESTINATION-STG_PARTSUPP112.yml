@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP112-9608efe8-ac83-49c4-8c5c-e5250c4bc222:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 6d6671cc-a116-408b-9018-e068f6f3b14f
+              stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b1dfbd12-0328-4126-b2d9-2ff4c4491c56
+                    stepCounter: 7c9001b4-4026-4a1d-8b8c-3e07b826ea64
+                transform: ""
+          - columnReference:
+              columnCounter: e4bfa7ef-6608-4a47-9a04-d9fbc3b0f838
+              stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 608b0169-0962-4418-9fac-30ec53be0bbb
+                    stepCounter: 7c9001b4-4026-4a1d-8b8c-3e07b826ea64
+                transform: ""
+          - columnReference:
+              columnCounter: 232bf5e2-d3d3-42c1-bc96-5bebdbc56810
+              stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c9ffaa4d-bb47-403b-a137-6fd92cef6403
+                    stepCounter: 7c9001b4-4026-4a1d-8b8c-3e07b826ea64
+                transform: ""
+          - columnReference:
+              columnCounter: 79fce9f2-d4da-43cd-bcb4-45e16c1db816
+              stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4f2f722-1d91-47f2-b81a-c61b9446af4b
+                    stepCounter: 7c9001b4-4026-4a1d-8b8c-3e07b826ea64
+                transform: ""
+          - columnReference:
+              columnCounter: faef3384-aa35-4b1a-b677-c07ffa5538ca
+              stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d7da90b-1c17-434c-8aa5-b669ab36c099
+                    stepCounter: 7c9001b4-4026-4a1d-8b8c-3e07b826ea64
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP46
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP46') }} "STG_PARTSUPP46"
+            name: STG_PARTSUPP112
+            noLinkRefs: []
+      name: STG_PARTSUPP112
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 9608efe8-ac83-49c4-8c5c-e5250c4bc222

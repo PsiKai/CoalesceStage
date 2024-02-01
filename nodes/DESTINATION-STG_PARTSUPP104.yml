@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP104-15db35a2-510c-4dc7-80d4-9223df1544cc:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 150a296b-e837-4815-b7f6-cc067d11cdd3
+              stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: decd20a3-a3c5-4502-858d-c184b6fbc34a
+                    stepCounter: 4cc35caa-0a99-4543-8d83-f518f0d790dd
+                transform: ""
+          - columnReference:
+              columnCounter: 2142a517-70ab-4202-8443-3908f8393d39
+              stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a69f0c34-31f3-4750-b24c-e12eca2c7dbe
+                    stepCounter: 4cc35caa-0a99-4543-8d83-f518f0d790dd
+                transform: ""
+          - columnReference:
+              columnCounter: 4b7768a4-30bb-4155-b1be-d7261eda4cd2
+              stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b5cb2c9-fce4-4ec8-8d51-cff184b2a8de
+                    stepCounter: 4cc35caa-0a99-4543-8d83-f518f0d790dd
+                transform: ""
+          - columnReference:
+              columnCounter: 749d136a-b90e-489e-81cf-9c203e5ea398
+              stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b5801be4-fc8d-4766-bf2d-7f331415e31d
+                    stepCounter: 4cc35caa-0a99-4543-8d83-f518f0d790dd
+                transform: ""
+          - columnReference:
+              columnCounter: ea9cac68-34b1-41cc-8f60-90bb20528205
+              stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cefd07b7-0f01-48e0-850c-51d9c25dbe67
+                    stepCounter: 4cc35caa-0a99-4543-8d83-f518f0d790dd
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP42
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP42') }} "STG_PARTSUPP42"
+            name: STG_PARTSUPP104
+            noLinkRefs: []
+      name: STG_PARTSUPP104
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc

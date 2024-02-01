@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP73-089aa030-f3fd-4335-9af7-0275c707deb4:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 31f27e60-6c40-408c-b363-701478b64008
+              stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af567cae-a068-4369-9d28-4777658da893
+                    stepCounter: 0a4fb35d-2a93-4e41-8e0b-de62a524be55
+                transform: ""
+          - columnReference:
+              columnCounter: d8dd3562-9c6c-42b3-8726-c0ff4c01935b
+              stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25611c87-c9fb-42f3-8c58-1fc8d5546372
+                    stepCounter: 0a4fb35d-2a93-4e41-8e0b-de62a524be55
+                transform: ""
+          - columnReference:
+              columnCounter: be4ad4b4-b1f7-4706-b5cf-cca3fa937255
+              stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e7afaa48-f197-476b-83d7-298fa5758545
+                    stepCounter: 0a4fb35d-2a93-4e41-8e0b-de62a524be55
+                transform: ""
+          - columnReference:
+              columnCounter: 466daf9a-8f2c-45f5-9033-1806c7563e3a
+              stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd9c0086-144f-4245-a87f-9454403f1c6a
+                    stepCounter: 0a4fb35d-2a93-4e41-8e0b-de62a524be55
+                transform: ""
+          - columnReference:
+              columnCounter: aaa7ec4e-128b-49b9-b459-a08ca0156dda
+              stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96548511-77ac-4ca7-943f-84718b806b2b
+                    stepCounter: 0a4fb35d-2a93-4e41-8e0b-de62a524be55
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP13
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP13') }} "STG_PARTSUPP13"
+            name: STG_PARTSUPP73
+            noLinkRefs: []
+      name: STG_PARTSUPP73
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 089aa030-f3fd-4335-9af7-0275c707deb4

@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP120-1178d802-5f8b-45be-91c7-46272ae80190:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 686806a8-ae86-4af2-8bec-c26d5bd088ef
+              stepCounter: 1178d802-5f8b-45be-91c7-46272ae80190
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6b7a1501-08ca-4e6b-adb3-d7a342aa1047
+                    stepCounter: b6d95704-6ac9-4a4a-b75d-a7f55e765108
+                transform: ""
+          - columnReference:
+              columnCounter: 53117203-4051-4f67-855e-738b7118c44a
+              stepCounter: 1178d802-5f8b-45be-91c7-46272ae80190
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a4b438e-fa86-4398-bb3c-1a87c944e0b1
+                    stepCounter: b6d95704-6ac9-4a4a-b75d-a7f55e765108
+                transform: ""
+          - columnReference:
+              columnCounter: 0c9d904d-ac17-4f41-84a9-ba135b4a8380
+              stepCounter: 1178d802-5f8b-45be-91c7-46272ae80190
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 46d18e91-56dc-4234-bc9e-cc1ab77b5ed4
+                    stepCounter: b6d95704-6ac9-4a4a-b75d-a7f55e765108
+                transform: ""
+          - columnReference:
+              columnCounter: a610241b-3da9-463c-827e-5816087d51d4
+              stepCounter: 1178d802-5f8b-45be-91c7-46272ae80190
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebc3c81d-64aa-490e-991a-19101187eec6
+                    stepCounter: b6d95704-6ac9-4a4a-b75d-a7f55e765108
+                transform: ""
+          - columnReference:
+              columnCounter: 0d1d6f76-58d5-4f6a-ae00-c218d9fd9e98
+              stepCounter: 1178d802-5f8b-45be-91c7-46272ae80190
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7b78fe10-b4bc-4c97-89ff-fc2abff7b8c2
+                    stepCounter: b6d95704-6ac9-4a4a-b75d-a7f55e765108
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP50
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP50') }} "STG_PARTSUPP50"
+            name: STG_PARTSUPP120
+            noLinkRefs: []
+      name: STG_PARTSUPP120
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1178d802-5f8b-45be-91c7-46272ae80190

@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP78-a1135195-4ae8-41c3-9a7c-b95abb43a9f3:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 37978be1-091a-4800-aede-7ecbf71d51e8
+              stepCounter: a1135195-4ae8-41c3-9a7c-b95abb43a9f3
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: acf3a11e-eae1-470c-9c7e-825aa04ceaab
+                    stepCounter: c0459632-f474-47c2-8db7-7bddd276cc1e
+                transform: ""
+          - columnReference:
+              columnCounter: 456372e2-3e0d-4c5c-bc27-c195f77e0006
+              stepCounter: a1135195-4ae8-41c3-9a7c-b95abb43a9f3
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7f59848d-b944-4311-8424-10a0cf8b56f3
+                    stepCounter: c0459632-f474-47c2-8db7-7bddd276cc1e
+                transform: ""
+          - columnReference:
+              columnCounter: 0e487cef-bcb5-4494-a1be-ad6ffc6bcc76
+              stepCounter: a1135195-4ae8-41c3-9a7c-b95abb43a9f3
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3149cf67-c1ce-4fff-98c6-271bd7cb8463
+                    stepCounter: c0459632-f474-47c2-8db7-7bddd276cc1e
+                transform: ""
+          - columnReference:
+              columnCounter: b4194225-796e-4a03-8156-50f643b171f0
+              stepCounter: a1135195-4ae8-41c3-9a7c-b95abb43a9f3
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6cab57a2-5dec-4ece-ae73-7797af27d824
+                    stepCounter: c0459632-f474-47c2-8db7-7bddd276cc1e
+                transform: ""
+          - columnReference:
+              columnCounter: bc958d7a-d33a-43c5-86ea-be50ba2a2313
+              stepCounter: a1135195-4ae8-41c3-9a7c-b95abb43a9f3
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac2ed036-6b79-44ba-bb1d-c8dea06f28ca
+                    stepCounter: c0459632-f474-47c2-8db7-7bddd276cc1e
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP14
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP14') }} "STG_PARTSUPP14"
+            name: STG_PARTSUPP78
+            noLinkRefs: []
+      name: STG_PARTSUPP78
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: a1135195-4ae8-41c3-9a7c-b95abb43a9f3

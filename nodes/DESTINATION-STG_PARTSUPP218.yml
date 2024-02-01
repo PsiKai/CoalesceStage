@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP218-86b647e4-e8fa-41e0-98a0-0312a23e3e09:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 024901cb-d265-4c97-8e8d-4d6ae1dd4cfb
+              stepCounter: 86b647e4-e8fa-41e0-98a0-0312a23e3e09
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 45f42a0d-4b41-4312-ab87-937aad38dbc2
+                    stepCounter: 92e20416-6984-4dd1-a179-0643695410ba
+                transform: ""
+          - columnReference:
+              columnCounter: 94c0f3d3-eb17-43fb-ae86-8d26fd8e5e61
+              stepCounter: 86b647e4-e8fa-41e0-98a0-0312a23e3e09
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc965130-4c8f-402f-b3b3-f6370ef25adf
+                    stepCounter: 92e20416-6984-4dd1-a179-0643695410ba
+                transform: ""
+          - columnReference:
+              columnCounter: 8b4c99fb-8386-49fc-a23b-2ef45f644f17
+              stepCounter: 86b647e4-e8fa-41e0-98a0-0312a23e3e09
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 86a93d81-595e-4c4b-a2d5-d20b95bcf3f8
+                    stepCounter: 92e20416-6984-4dd1-a179-0643695410ba
+                transform: ""
+          - columnReference:
+              columnCounter: ff71817f-a85f-4776-b98c-b011d3d04ac7
+              stepCounter: 86b647e4-e8fa-41e0-98a0-0312a23e3e09
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dd67779e-6e64-4786-9756-dffd630e5c4b
+                    stepCounter: 92e20416-6984-4dd1-a179-0643695410ba
+                transform: ""
+          - columnReference:
+              columnCounter: 44973190-08f7-4ef2-b5b4-39f295c38b0f
+              stepCounter: 86b647e4-e8fa-41e0-98a0-0312a23e3e09
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98f07286-b287-44a6-a0e3-8f694de70cf3
+                    stepCounter: 92e20416-6984-4dd1-a179-0643695410ba
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP87
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP87') }} "STG_PARTSUPP87"
+            name: STG_PARTSUPP218
+            noLinkRefs: []
+      name: STG_PARTSUPP218
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 86b647e4-e8fa-41e0-98a0-0312a23e3e09

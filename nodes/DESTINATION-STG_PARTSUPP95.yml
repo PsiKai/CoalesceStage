@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP95-36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1e6c787d-dc9a-49c9-a39e-172edf9bd345
+              stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c01fd07a-f7e0-4b27-a732-a95d9636d748
+                    stepCounter: f4ef6b95-a417-488d-9181-12dc1ddb8d36
+                transform: ""
+          - columnReference:
+              columnCounter: 415a5b81-f877-4e87-bcc2-94d8d14715c0
+              stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 615d1cd3-7c7e-41b0-8af0-65946eb3f59b
+                    stepCounter: f4ef6b95-a417-488d-9181-12dc1ddb8d36
+                transform: ""
+          - columnReference:
+              columnCounter: 586d46cc-38e8-41a2-b544-b221903815ed
+              stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 295cd6f4-6b52-4aa8-8963-d5a4f1aade3d
+                    stepCounter: f4ef6b95-a417-488d-9181-12dc1ddb8d36
+                transform: ""
+          - columnReference:
+              columnCounter: b5a016c5-83f7-4d2b-9acb-356b5db2ae4f
+              stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ba1ff1b8-4104-4f52-8a98-465f466871a3
+                    stepCounter: f4ef6b95-a417-488d-9181-12dc1ddb8d36
+                transform: ""
+          - columnReference:
+              columnCounter: ff0e8a42-68bd-40e6-b910-1101b70565ad
+              stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bfe68fea-7248-444a-a016-1a6c3ec445ce
+                    stepCounter: f4ef6b95-a417-488d-9181-12dc1ddb8d36
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP27
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP27') }} "STG_PARTSUPP27"
+            name: STG_PARTSUPP95
+            noLinkRefs: []
+      name: STG_PARTSUPP95
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 36e6cbcb-1f30-40fc-b6a2-3273e5b6bc89

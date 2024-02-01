@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP145-3ac2afd1-73a0-4e7b-9ee4-c9e0d1efda4c:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 882d4214-0008-4372-b4f1-aaa720dca8a6
+              stepCounter: 3ac2afd1-73a0-4e7b-9ee4-c9e0d1efda4c
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2402ecf4-cc45-4de2-a7d5-fbf727fbab49
+                    stepCounter: 406e2b11-99a6-422b-9ac3-5a05b2110689
+                transform: ""
+          - columnReference:
+              columnCounter: 34544caa-b3f3-441e-97ec-fc736550b568
+              stepCounter: 3ac2afd1-73a0-4e7b-9ee4-c9e0d1efda4c
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d419077-bfc7-4f13-a5b0-97b8debd7ee9
+                    stepCounter: 406e2b11-99a6-422b-9ac3-5a05b2110689
+                transform: ""
+          - columnReference:
+              columnCounter: 57608831-5a35-4451-bd32-0ba49dadcd84
+              stepCounter: 3ac2afd1-73a0-4e7b-9ee4-c9e0d1efda4c
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29e9e771-8101-4571-a7f4-ee691da01ba2
+                    stepCounter: 406e2b11-99a6-422b-9ac3-5a05b2110689
+                transform: ""
+          - columnReference:
+              columnCounter: 7017b561-d28e-478e-9152-a0b19d1c595c
+              stepCounter: 3ac2afd1-73a0-4e7b-9ee4-c9e0d1efda4c
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 361f6d9f-29bb-4a2e-bc59-cac17109387b
+                    stepCounter: 406e2b11-99a6-422b-9ac3-5a05b2110689
+                transform: ""
+          - columnReference:
+              columnCounter: 9570df19-e024-44d8-8d16-147648d9b370
+              stepCounter: 3ac2afd1-73a0-4e7b-9ee4-c9e0d1efda4c
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 014afb38-0083-4790-9d73-87ed99a80bc7
+                    stepCounter: 406e2b11-99a6-422b-9ac3-5a05b2110689
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP26
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP26') }} "STG_PARTSUPP26"
+            name: STG_PARTSUPP145
+            noLinkRefs: []
+      name: STG_PARTSUPP145
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 3ac2afd1-73a0-4e7b-9ee4-c9e0d1efda4c

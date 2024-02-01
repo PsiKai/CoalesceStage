@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP221-03d97487-cb1b-40fe-9f73-475e1ea04f71:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 95eafb42-6e43-49f0-9d40-cc259cbd3c0c
+              stepCounter: 03d97487-cb1b-40fe-9f73-475e1ea04f71
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8315f890-9d9e-4b59-b78e-acdc91630d1e
+                    stepCounter: 9effec23-e883-4eba-bb81-2319456a3b51
+                transform: ""
+          - columnReference:
+              columnCounter: a4bfdda7-698a-45a1-b611-6435999242a9
+              stepCounter: 03d97487-cb1b-40fe-9f73-475e1ea04f71
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b2ba9c63-db20-44d7-a33f-307b0dc566ad
+                    stepCounter: 9effec23-e883-4eba-bb81-2319456a3b51
+                transform: ""
+          - columnReference:
+              columnCounter: 6d2f23a8-f230-4934-9829-b2ed3a522c57
+              stepCounter: 03d97487-cb1b-40fe-9f73-475e1ea04f71
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc49b608-7442-4aa0-bd39-d44da64ba02a
+                    stepCounter: 9effec23-e883-4eba-bb81-2319456a3b51
+                transform: ""
+          - columnReference:
+              columnCounter: 53369ca4-7547-4d7f-b85e-6114479a1fae
+              stepCounter: 03d97487-cb1b-40fe-9f73-475e1ea04f71
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d8b717a-ce40-4309-a475-8c5797af3415
+                    stepCounter: 9effec23-e883-4eba-bb81-2319456a3b51
+                transform: ""
+          - columnReference:
+              columnCounter: d188b12a-a7ef-4d3b-b68a-7364f75c2ff8
+              stepCounter: 03d97487-cb1b-40fe-9f73-475e1ea04f71
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d01e2b62-d7d6-4d9d-a2d3-244e216a959d
+                    stepCounter: 9effec23-e883-4eba-bb81-2319456a3b51
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP101
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP101') }} "STG_PARTSUPP101"
+            name: STG_PARTSUPP221
+            noLinkRefs: []
+      name: STG_PARTSUPP221
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 03d97487-cb1b-40fe-9f73-475e1ea04f71

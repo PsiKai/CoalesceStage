@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP182-39818f40-6d30-4c97-8602-ea7b05e029eb:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b0a2d7cf-0554-45f8-8f40-4c39aac19cd8
+              stepCounter: 39818f40-6d30-4c97-8602-ea7b05e029eb
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bee17a01-e212-4550-b788-c549ce18ca2f
+                    stepCounter: a5b555ef-89d6-4ed0-b1f1-d8c851b750e0
+                transform: ""
+          - columnReference:
+              columnCounter: 02bab041-1db5-4110-9d92-1c7eb753a801
+              stepCounter: 39818f40-6d30-4c97-8602-ea7b05e029eb
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 202efe8a-0f31-48a6-9b8d-247d62e0617b
+                    stepCounter: a5b555ef-89d6-4ed0-b1f1-d8c851b750e0
+                transform: ""
+          - columnReference:
+              columnCounter: a98f71c2-825e-43e1-a867-65264fa685ca
+              stepCounter: 39818f40-6d30-4c97-8602-ea7b05e029eb
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37dc5b0a-930d-45db-b70e-52ade8f91e17
+                    stepCounter: a5b555ef-89d6-4ed0-b1f1-d8c851b750e0
+                transform: ""
+          - columnReference:
+              columnCounter: 2ff155d6-5321-4299-ab48-61b339c24b35
+              stepCounter: 39818f40-6d30-4c97-8602-ea7b05e029eb
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 56aa82bc-d27a-4071-8a16-7fc932dc7f33
+                    stepCounter: a5b555ef-89d6-4ed0-b1f1-d8c851b750e0
+                transform: ""
+          - columnReference:
+              columnCounter: a864801d-31d6-4711-b662-2c8f0a83e3f1
+              stepCounter: 39818f40-6d30-4c97-8602-ea7b05e029eb
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4484026-889d-45c3-96c8-70c4116b3020
+                    stepCounter: a5b555ef-89d6-4ed0-b1f1-d8c851b750e0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP61
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP61') }} "STG_PARTSUPP61"
+            name: STG_PARTSUPP182
+            noLinkRefs: []
+      name: STG_PARTSUPP182
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 39818f40-6d30-4c97-8602-ea7b05e029eb

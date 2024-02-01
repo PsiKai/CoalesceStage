@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP183-009e9a4c-b1f5-466b-9f40-e67fafd0140e:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 193f004e-3894-4a07-ab62-a07b7d5f975e
+              stepCounter: 009e9a4c-b1f5-466b-9f40-e67fafd0140e
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c4463a67-e84a-4c91-a94e-de0710e060a5
+                    stepCounter: a829d1c8-0ee8-4696-bbbb-490fd4054f56
+                transform: ""
+          - columnReference:
+              columnCounter: 51219e2e-0705-42a3-a908-ed41190e4890
+              stepCounter: 009e9a4c-b1f5-466b-9f40-e67fafd0140e
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8df7c0c7-9796-43dc-a315-bd752ea96e90
+                    stepCounter: a829d1c8-0ee8-4696-bbbb-490fd4054f56
+                transform: ""
+          - columnReference:
+              columnCounter: 90a4fcb7-8544-4e12-848f-dcdb7e5e4128
+              stepCounter: 009e9a4c-b1f5-466b-9f40-e67fafd0140e
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 538590bf-b60f-4d42-b02a-eb821fd1f35c
+                    stepCounter: a829d1c8-0ee8-4696-bbbb-490fd4054f56
+                transform: ""
+          - columnReference:
+              columnCounter: 1257acbc-9657-4c4d-84b4-bd7a6047587a
+              stepCounter: 009e9a4c-b1f5-466b-9f40-e67fafd0140e
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8e406d2-1e9e-48cf-8bae-66488008446f
+                    stepCounter: a829d1c8-0ee8-4696-bbbb-490fd4054f56
+                transform: ""
+          - columnReference:
+              columnCounter: c2c97aa3-9d46-4e44-aa27-38c3c0b92a01
+              stepCounter: 009e9a4c-b1f5-466b-9f40-e67fafd0140e
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b91ac41d-295d-470f-b023-021543728f50
+                    stepCounter: a829d1c8-0ee8-4696-bbbb-490fd4054f56
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP52
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP52') }} "STG_PARTSUPP52"
+            name: STG_PARTSUPP183
+            noLinkRefs: []
+      name: STG_PARTSUPP183
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 009e9a4c-b1f5-466b-9f40-e67fafd0140e

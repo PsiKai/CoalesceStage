@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP154-f3bb4a83-be39-41cd-8e4f-1588b13862fd:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a897476e-9062-47cb-ac2a-5c73e95fcbfa
+              stepCounter: f3bb4a83-be39-41cd-8e4f-1588b13862fd
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: da7fb526-ba1d-4d78-863c-868000e97e1c
+                    stepCounter: e582cb11-8167-44fa-b019-5ea90ee1366c
+                transform: ""
+          - columnReference:
+              columnCounter: eb12f165-3905-4491-af88-cb0f56f42fa9
+              stepCounter: f3bb4a83-be39-41cd-8e4f-1588b13862fd
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f045792-c042-4306-8345-17530dd4408e
+                    stepCounter: e582cb11-8167-44fa-b019-5ea90ee1366c
+                transform: ""
+          - columnReference:
+              columnCounter: 962dc522-3618-4e7d-8cca-cb572708d17b
+              stepCounter: f3bb4a83-be39-41cd-8e4f-1588b13862fd
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0beac5ea-3462-48c2-af16-db5eb567ce7a
+                    stepCounter: e582cb11-8167-44fa-b019-5ea90ee1366c
+                transform: ""
+          - columnReference:
+              columnCounter: 2d68d992-1c24-4b77-a454-a6fe6171e6af
+              stepCounter: f3bb4a83-be39-41cd-8e4f-1588b13862fd
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f83e65a6-fe7a-4a9f-b802-2a453d963ee8
+                    stepCounter: e582cb11-8167-44fa-b019-5ea90ee1366c
+                transform: ""
+          - columnReference:
+              columnCounter: eaca2388-79d8-4437-8606-c81ba9f7b4be
+              stepCounter: f3bb4a83-be39-41cd-8e4f-1588b13862fd
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 821710a4-dadd-4811-810b-df5d729da9bb
+                    stepCounter: e582cb11-8167-44fa-b019-5ea90ee1366c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP21
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP21') }} "STG_PARTSUPP21"
+            name: STG_PARTSUPP154
+            noLinkRefs: []
+      name: STG_PARTSUPP154
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: f3bb4a83-be39-41cd-8e4f-1588b13862fd

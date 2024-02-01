@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP146-c6d0c133-6748-45be-9ceb-f490e553471d:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b8383aab-235d-48b8-b77e-b2062f09b91d
+              stepCounter: c6d0c133-6748-45be-9ceb-f490e553471d
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e0c9f1ca-57ff-4f21-9f8c-d885d3a50a66
+                    stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e
+                transform: ""
+          - columnReference:
+              columnCounter: 93ae82e0-afae-44d2-bdbc-084ecb8c47cd
+              stepCounter: c6d0c133-6748-45be-9ceb-f490e553471d
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e4c4ba99-dc60-4367-8e90-156a4c21d972
+                    stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e
+                transform: ""
+          - columnReference:
+              columnCounter: 0209f4ca-3954-47a7-b502-d781d882b642
+              stepCounter: c6d0c133-6748-45be-9ceb-f490e553471d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59d4b0e7-5d33-4324-92af-278d74464fc3
+                    stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e
+                transform: ""
+          - columnReference:
+              columnCounter: ed200180-e526-4b9e-ae12-dffdce4e62dd
+              stepCounter: c6d0c133-6748-45be-9ceb-f490e553471d
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0bc1188b-320a-4593-928e-71359d762a45
+                    stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e
+                transform: ""
+          - columnReference:
+              columnCounter: 65845402-705b-4493-936b-9059bb4f87a9
+              stepCounter: c6d0c133-6748-45be-9ceb-f490e553471d
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 53c301d9-ab1c-49aa-8cbb-ccc9ca7c63cd
+                    stepCounter: 4ab41035-32d3-4bca-91fc-200d50f8409e
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP31
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP31') }} "STG_PARTSUPP31"
+            name: STG_PARTSUPP146
+            noLinkRefs: []
+      name: STG_PARTSUPP146
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: c6d0c133-6748-45be-9ceb-f490e553471d

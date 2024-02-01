@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP122-d6d4bb5a-ab28-4280-a2cc-71b4e851dd4c:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b709fa87-a72d-42b2-b9a2-d49b680ea430
+              stepCounter: d6d4bb5a-ab28-4280-a2cc-71b4e851dd4c
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9761660-aeec-4c3d-9201-e9df511e832d
+                    stepCounter: d5efd5eb-9d3f-4284-9a7d-a0d2ec9ee53b
+                transform: ""
+          - columnReference:
+              columnCounter: 9cb00a5f-70a7-4075-9e2b-b4f5cff647bb
+              stepCounter: d6d4bb5a-ab28-4280-a2cc-71b4e851dd4c
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32e82aa9-3e44-48e9-b283-10e104b499e9
+                    stepCounter: d5efd5eb-9d3f-4284-9a7d-a0d2ec9ee53b
+                transform: ""
+          - columnReference:
+              columnCounter: e413d7ed-f52e-43fd-a2b6-7f60707dc39b
+              stepCounter: d6d4bb5a-ab28-4280-a2cc-71b4e851dd4c
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26e3ba2c-a56d-4ba6-8337-2d6a1eccd4b9
+                    stepCounter: d5efd5eb-9d3f-4284-9a7d-a0d2ec9ee53b
+                transform: ""
+          - columnReference:
+              columnCounter: 00d9fdd6-90e9-4d29-87c4-1ca67c240467
+              stepCounter: d6d4bb5a-ab28-4280-a2cc-71b4e851dd4c
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fee35a8f-ab36-4d13-a702-149c2fde3346
+                    stepCounter: d5efd5eb-9d3f-4284-9a7d-a0d2ec9ee53b
+                transform: ""
+          - columnReference:
+              columnCounter: 68cef41d-f9f8-44e0-9a73-1c598dba96a9
+              stepCounter: d6d4bb5a-ab28-4280-a2cc-71b4e851dd4c
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 31aa5ae5-870b-4c8e-b688-ac52c43f21a9
+                    stepCounter: d5efd5eb-9d3f-4284-9a7d-a0d2ec9ee53b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP48
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP48') }} "STG_PARTSUPP48"
+            name: STG_PARTSUPP122
+            noLinkRefs: []
+      name: STG_PARTSUPP122
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: d6d4bb5a-ab28-4280-a2cc-71b4e851dd4c

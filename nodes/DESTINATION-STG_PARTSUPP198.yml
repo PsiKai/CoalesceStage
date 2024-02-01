@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP198-4be5340e-1c7e-4179-81eb-dfd75da4b474:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: dad67480-d56d-4cc6-a755-729aecdf28f5
+              stepCounter: 4be5340e-1c7e-4179-81eb-dfd75da4b474
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 150a296b-e837-4815-b7f6-cc067d11cdd3
+                    stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc
+                transform: ""
+          - columnReference:
+              columnCounter: 47360827-2ba3-4c49-98bb-7c23118def69
+              stepCounter: 4be5340e-1c7e-4179-81eb-dfd75da4b474
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2142a517-70ab-4202-8443-3908f8393d39
+                    stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc
+                transform: ""
+          - columnReference:
+              columnCounter: c60b2a23-8537-4c20-96f9-4f1860b1a2c2
+              stepCounter: 4be5340e-1c7e-4179-81eb-dfd75da4b474
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4b7768a4-30bb-4155-b1be-d7261eda4cd2
+                    stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc
+                transform: ""
+          - columnReference:
+              columnCounter: e9d569bf-aa67-40ee-ac50-baa040b48e32
+              stepCounter: 4be5340e-1c7e-4179-81eb-dfd75da4b474
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 749d136a-b90e-489e-81cf-9c203e5ea398
+                    stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc
+                transform: ""
+          - columnReference:
+              columnCounter: 69d05cf7-080b-4a98-b137-fff25a006869
+              stepCounter: 4be5340e-1c7e-4179-81eb-dfd75da4b474
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea9cac68-34b1-41cc-8f60-90bb20528205
+                    stepCounter: 15db35a2-510c-4dc7-80d4-9223df1544cc
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP104
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP104') }} "STG_PARTSUPP104"
+            name: STG_PARTSUPP198
+            noLinkRefs: []
+      name: STG_PARTSUPP198
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 4be5340e-1c7e-4179-81eb-dfd75da4b474

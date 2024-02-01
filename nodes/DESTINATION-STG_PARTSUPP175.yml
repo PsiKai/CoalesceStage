@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP175-c76df6fb-3457-4f1a-843e-63d66d63fe03:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: c98d9820-5359-41c6-8ee9-461c6d2748f9
+              stepCounter: c76df6fb-3457-4f1a-843e-63d66d63fe03
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af9aeaec-e9cd-4110-8aae-a21a27d96408
+                    stepCounter: 73806a4c-c3b8-4fcd-b219-6fcabaa858b1
+                transform: ""
+          - columnReference:
+              columnCounter: 06feca49-a8d1-4d76-92eb-442b92f15f45
+              stepCounter: c76df6fb-3457-4f1a-843e-63d66d63fe03
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0dafe8c6-b21c-4dfd-b39d-811a22d3c161
+                    stepCounter: 73806a4c-c3b8-4fcd-b219-6fcabaa858b1
+                transform: ""
+          - columnReference:
+              columnCounter: d92fe829-cd8b-49b5-9b83-8db3088e73d5
+              stepCounter: c76df6fb-3457-4f1a-843e-63d66d63fe03
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2117c161-aa71-47c0-bbaf-c0cd342c9c29
+                    stepCounter: 73806a4c-c3b8-4fcd-b219-6fcabaa858b1
+                transform: ""
+          - columnReference:
+              columnCounter: 3bfe39d6-dcc8-4494-bd87-4d56cfaf5dea
+              stepCounter: c76df6fb-3457-4f1a-843e-63d66d63fe03
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 91ef810c-3a82-46cd-b87b-906634f22f1c
+                    stepCounter: 73806a4c-c3b8-4fcd-b219-6fcabaa858b1
+                transform: ""
+          - columnReference:
+              columnCounter: 465a6da5-a432-4226-8f0f-3db3a3a3a5c2
+              stepCounter: c76df6fb-3457-4f1a-843e-63d66d63fe03
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 465bd7f9-8175-4af8-bdfa-60470e955187
+                    stepCounter: 73806a4c-c3b8-4fcd-b219-6fcabaa858b1
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP39
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP39') }} "STG_PARTSUPP39"
+            name: STG_PARTSUPP175
+            noLinkRefs: []
+      name: STG_PARTSUPP175
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: c76df6fb-3457-4f1a-843e-63d66d63fe03

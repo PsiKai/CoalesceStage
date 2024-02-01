@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP206-a6815647-8b96-4c4c-9d86-ef9f1576ab73:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a9b3215d-a464-4d1d-9cc1-3e3a6209dd79
+              stepCounter: a6815647-8b96-4c4c-9d86-ef9f1576ab73
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 585f95e9-d307-4239-836a-db65c51bd013
+                    stepCounter: 45217634-8aed-46f1-bcbd-6978d76382d7
+                transform: ""
+          - columnReference:
+              columnCounter: dcf429ca-f4ad-447d-bb3f-cf75377f59fc
+              stepCounter: a6815647-8b96-4c4c-9d86-ef9f1576ab73
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 734a8fa1-6de3-4f48-b70a-b8c9b65123c4
+                    stepCounter: 45217634-8aed-46f1-bcbd-6978d76382d7
+                transform: ""
+          - columnReference:
+              columnCounter: 6bd5eead-a5f6-4f76-9706-5ffa8cddf267
+              stepCounter: a6815647-8b96-4c4c-9d86-ef9f1576ab73
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 702d2531-4742-4f25-9e87-608d68a8ca50
+                    stepCounter: 45217634-8aed-46f1-bcbd-6978d76382d7
+                transform: ""
+          - columnReference:
+              columnCounter: 71808481-02b6-4996-8737-8155aef0f7ec
+              stepCounter: a6815647-8b96-4c4c-9d86-ef9f1576ab73
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2118f1c8-2901-45ab-bd57-790a6c86bfdd
+                    stepCounter: 45217634-8aed-46f1-bcbd-6978d76382d7
+                transform: ""
+          - columnReference:
+              columnCounter: 49ec1e1a-e1f7-4cf7-86e4-e72575bb3ef7
+              stepCounter: a6815647-8b96-4c4c-9d86-ef9f1576ab73
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ceb56cf1-5bac-4486-9b20-b1edc079c57a
+                    stepCounter: 45217634-8aed-46f1-bcbd-6978d76382d7
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP80
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP80') }} "STG_PARTSUPP80"
+            name: STG_PARTSUPP206
+            noLinkRefs: []
+      name: STG_PARTSUPP206
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: a6815647-8b96-4c4c-9d86-ef9f1576ab73

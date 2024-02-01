@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP113-8ccff264-8fc1-47ee-bd84-5540676ceef9:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: df45b737-8938-41fd-8c2b-ac85d3410f94
+              stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f10b3b1a-76e1-4599-8374-0a5e4a21aa5d
+                    stepCounter: 80752f57-8440-4a7e-b48a-c4c4e16b10c8
+                transform: ""
+          - columnReference:
+              columnCounter: 7e64afdc-1008-4d9a-8bf5-cdf66ed44efb
+              stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 48da1c9d-cd5c-48b4-98fe-d13c6bf89541
+                    stepCounter: 80752f57-8440-4a7e-b48a-c4c4e16b10c8
+                transform: ""
+          - columnReference:
+              columnCounter: ed83633e-4aef-466a-ab70-bfac82053f70
+              stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fefb1213-6d84-4496-b891-b5b655f9be17
+                    stepCounter: 80752f57-8440-4a7e-b48a-c4c4e16b10c8
+                transform: ""
+          - columnReference:
+              columnCounter: a4a68e6d-cf9f-4b57-a1a4-82dfbed150f6
+              stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c090127-9275-417c-ac8a-03a72d7d4c48
+                    stepCounter: 80752f57-8440-4a7e-b48a-c4c4e16b10c8
+                transform: ""
+          - columnReference:
+              columnCounter: 31784ae1-7d71-4fdf-b708-9b7facc2624b
+              stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 982d4453-bb25-4ec0-853f-1e382e8b603c
+                    stepCounter: 80752f57-8440-4a7e-b48a-c4c4e16b10c8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP32
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP32') }} "STG_PARTSUPP32"
+            name: STG_PARTSUPP113
+            noLinkRefs: []
+      name: STG_PARTSUPP113
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 8ccff264-8fc1-47ee-bd84-5540676ceef9

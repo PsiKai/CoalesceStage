@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP79-55e99ce7-5381-4e73-ab7d-19f645cb4eac:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: fd24c243-fa32-4b99-a755-b878dff48a10
+              stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 417661e4-e629-422c-aa2a-2fac65c47f4b
+                    stepCounter: ce580859-06a5-471d-a386-3687e19aeea0
+                transform: ""
+          - columnReference:
+              columnCounter: e644c6ac-cd80-4ec0-9f1a-3a01551337c4
+              stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d496f68f-0f2a-4eb6-8cff-bad325113c35
+                    stepCounter: ce580859-06a5-471d-a386-3687e19aeea0
+                transform: ""
+          - columnReference:
+              columnCounter: 851b568a-6041-4dec-bd9e-e101eaaed5df
+              stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b1465fef-dbb4-43fe-961e-7e325a3dd4cf
+                    stepCounter: ce580859-06a5-471d-a386-3687e19aeea0
+                transform: ""
+          - columnReference:
+              columnCounter: 1ea14870-a11a-422a-9ce8-541efd0d63db
+              stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 474b9e49-ed7e-4429-94bd-00e303407f52
+                    stepCounter: ce580859-06a5-471d-a386-3687e19aeea0
+                transform: ""
+          - columnReference:
+              columnCounter: ab90eb35-5b4f-40f2-a605-51620f8c75fd
+              stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9270f4bf-581f-4cb2-9878-4dda05f12064
+                    stepCounter: ce580859-06a5-471d-a386-3687e19aeea0
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP10
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP10') }} "STG_PARTSUPP10"
+            name: STG_PARTSUPP79
+            noLinkRefs: []
+      name: STG_PARTSUPP79
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 55e99ce7-5381-4e73-ab7d-19f645cb4eac

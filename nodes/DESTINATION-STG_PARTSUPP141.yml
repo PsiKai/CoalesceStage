@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP141-12a40464-6138-4020-ad54-96e92fee7052:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b9c4a447-73cd-411d-8595-208dcc60a1ab
+              stepCounter: 12a40464-6138-4020-ad54-96e92fee7052
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b9e064f7-03dc-4502-8637-6aee9469a7ff
+                    stepCounter: 828fc1db-361e-4b1c-bd82-3a279467a78c
+                transform: ""
+          - columnReference:
+              columnCounter: 04ceeace-91d3-4c40-9493-813d3eee55fe
+              stepCounter: 12a40464-6138-4020-ad54-96e92fee7052
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 09a77a71-2a54-4be6-9bce-5fc136006e65
+                    stepCounter: 828fc1db-361e-4b1c-bd82-3a279467a78c
+                transform: ""
+          - columnReference:
+              columnCounter: ad6229e5-0f67-43b3-9a13-49ad9f1b8ece
+              stepCounter: 12a40464-6138-4020-ad54-96e92fee7052
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d32ed680-52f0-48d6-8202-c809368242c9
+                    stepCounter: 828fc1db-361e-4b1c-bd82-3a279467a78c
+                transform: ""
+          - columnReference:
+              columnCounter: bfce95dc-61c2-40dc-bef5-2dd573032992
+              stepCounter: 12a40464-6138-4020-ad54-96e92fee7052
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4ad52700-ab1c-4912-a6d1-d0c431413df8
+                    stepCounter: 828fc1db-361e-4b1c-bd82-3a279467a78c
+                transform: ""
+          - columnReference:
+              columnCounter: e6450645-e056-421a-b1f3-e4e1a6f0e4e1
+              stepCounter: 12a40464-6138-4020-ad54-96e92fee7052
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6599dfd0-1f60-4c44-a0e2-76fad9720a30
+                    stepCounter: 828fc1db-361e-4b1c-bd82-3a279467a78c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP11
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP11') }} "STG_PARTSUPP11"
+            name: STG_PARTSUPP141
+            noLinkRefs: []
+      name: STG_PARTSUPP141
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 12a40464-6138-4020-ad54-96e92fee7052

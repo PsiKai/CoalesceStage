@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP153-c55f2e32-6a25-4f50-9c96-77e6cbd433d6:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4cef1227-7a50-4791-9b05-aa75aca8c4a9
+              stepCounter: c55f2e32-6a25-4f50-9c96-77e6cbd433d6
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d745fb33-9bd1-41e8-a954-0bd4533dad52
+                    stepCounter: c4169f6b-b76d-4374-ba82-8c7829408b20
+                transform: ""
+          - columnReference:
+              columnCounter: 7cae7c9d-c3b8-46c0-9624-fad680a0c904
+              stepCounter: c55f2e32-6a25-4f50-9c96-77e6cbd433d6
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 992cf774-21f3-44ed-a171-929ca1ea8f0e
+                    stepCounter: c4169f6b-b76d-4374-ba82-8c7829408b20
+                transform: ""
+          - columnReference:
+              columnCounter: 764bd809-53ae-42d1-ac0f-e48a295489a5
+              stepCounter: c55f2e32-6a25-4f50-9c96-77e6cbd433d6
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a2c8b30-4210-49cf-b723-262fae60c180
+                    stepCounter: c4169f6b-b76d-4374-ba82-8c7829408b20
+                transform: ""
+          - columnReference:
+              columnCounter: 619e2512-c161-4583-97f8-5e8be0053117
+              stepCounter: c55f2e32-6a25-4f50-9c96-77e6cbd433d6
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2788e37c-6d43-4c2c-bb0b-1d630a911ec7
+                    stepCounter: c4169f6b-b76d-4374-ba82-8c7829408b20
+                transform: ""
+          - columnReference:
+              columnCounter: 748f2b8d-6325-479c-a7e2-bc4a7dd9ac74
+              stepCounter: c55f2e32-6a25-4f50-9c96-77e6cbd433d6
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 88cccbac-6c1f-4f74-8e74-4c382f2fa55b
+                    stepCounter: c4169f6b-b76d-4374-ba82-8c7829408b20
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP24
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP24') }} "STG_PARTSUPP24"
+            name: STG_PARTSUPP153
+            noLinkRefs: []
+      name: STG_PARTSUPP153
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: c55f2e32-6a25-4f50-9c96-77e6cbd433d6

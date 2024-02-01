@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP220-87bf1c07-a954-482b-b53f-42ec930c43fe:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 3441c521-0951-43b4-8652-efe30550cc13
+              stepCounter: 87bf1c07-a954-482b-b53f-42ec930c43fe
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 452f5fbe-3267-4b0d-a140-30df0f36cc35
+                    stepCounter: 9de45fbf-d847-4433-89bd-f6f9cdc3e60c
+                transform: ""
+          - columnReference:
+              columnCounter: 24695560-1c4f-4e26-8d84-b1a91de2451e
+              stepCounter: 87bf1c07-a954-482b-b53f-42ec930c43fe
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce47f2bd-4716-4ac1-b888-5022af8d03a9
+                    stepCounter: 9de45fbf-d847-4433-89bd-f6f9cdc3e60c
+                transform: ""
+          - columnReference:
+              columnCounter: afea5efd-1390-46ca-930d-dc40a8ca54de
+              stepCounter: 87bf1c07-a954-482b-b53f-42ec930c43fe
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 06d161cb-d827-4485-b079-d1f1a2c5edb3
+                    stepCounter: 9de45fbf-d847-4433-89bd-f6f9cdc3e60c
+                transform: ""
+          - columnReference:
+              columnCounter: eef3b0af-6426-459e-9a64-946e39d2608a
+              stepCounter: 87bf1c07-a954-482b-b53f-42ec930c43fe
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 20e4db9e-bd34-4f6e-8044-753452b18895
+                    stepCounter: 9de45fbf-d847-4433-89bd-f6f9cdc3e60c
+                transform: ""
+          - columnReference:
+              columnCounter: 9a638b27-b08b-43cd-be9e-e8c8cab60b6e
+              stepCounter: 87bf1c07-a954-482b-b53f-42ec930c43fe
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e69f136-92dd-4ddd-acf9-0f05ae986183
+                    stepCounter: 9de45fbf-d847-4433-89bd-f6f9cdc3e60c
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP106
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP106') }} "STG_PARTSUPP106"
+            name: STG_PARTSUPP220
+            noLinkRefs: []
+      name: STG_PARTSUPP220
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 87bf1c07-a954-482b-b53f-42ec930c43fe

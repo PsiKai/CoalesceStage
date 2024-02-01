@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP231-93a67055-bd7a-474c-838b-af7db1f52424:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 6b971356-b4df-45ba-b4e4-51b9a778a2df
+              stepCounter: 93a67055-bd7a-474c-838b-af7db1f52424
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f1ebd38a-3f37-430d-844f-31696efe48b6
+                    stepCounter: c8e1b5f8-1b75-4297-8ca0-d20f4c42b4c5
+                transform: ""
+          - columnReference:
+              columnCounter: 22d1066f-ca31-427d-b19b-af2f7f7db373
+              stepCounter: 93a67055-bd7a-474c-838b-af7db1f52424
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4136d3db-c08d-4a14-96fc-f50b00e7473a
+                    stepCounter: c8e1b5f8-1b75-4297-8ca0-d20f4c42b4c5
+                transform: ""
+          - columnReference:
+              columnCounter: c2dade1d-6c89-46fa-b71b-7bca6d384554
+              stepCounter: 93a67055-bd7a-474c-838b-af7db1f52424
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5f8188e4-8ea1-4219-bffc-d843172adba2
+                    stepCounter: c8e1b5f8-1b75-4297-8ca0-d20f4c42b4c5
+                transform: ""
+          - columnReference:
+              columnCounter: 393d6115-d447-4069-ba12-570b1d35d322
+              stepCounter: 93a67055-bd7a-474c-838b-af7db1f52424
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0aba591f-300a-49b9-928c-a4c5880a2fec
+                    stepCounter: c8e1b5f8-1b75-4297-8ca0-d20f4c42b4c5
+                transform: ""
+          - columnReference:
+              columnCounter: f825ac1e-d16b-4816-9be1-c67bd38eb968
+              stepCounter: 93a67055-bd7a-474c-838b-af7db1f52424
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 54a0c1e8-9d88-46fc-9b74-56cc6f61a05d
+                    stepCounter: c8e1b5f8-1b75-4297-8ca0-d20f4c42b4c5
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP109
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP109') }} "STG_PARTSUPP109"
+            name: STG_PARTSUPP231
+            noLinkRefs: []
+      name: STG_PARTSUPP231
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 93a67055-bd7a-474c-838b-af7db1f52424

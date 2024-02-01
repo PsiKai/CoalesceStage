@@ -1,0 +1,107 @@
+steps:
+  STG_PARTSUPP96-79998226-29e2-45aa-a9c5-eae2af3ca4d8:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: DESTINATION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: e784de02-19c2-4c46-a9fd-cf0f08cb21da
+              stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
+            dataType: NUMBER(38,0)
+            description: Foreign Key to P_PARTKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a1ea2ac-25ab-4a46-b3bb-a7a0bd0a9411
+                    stepCounter: 008681da-022f-40fb-9754-4059259e26ee
+                transform: ""
+          - columnReference:
+              columnCounter: db5e1dd1-830e-4b24-9b34-8dccda0c55c6
+              stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
+            dataType: NUMBER(38,0)
+            description: Foreign Key to S_SUPPKEY
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6bd642c3-9c76-4245-a3b9-69ca4493c3b4
+                    stepCounter: 008681da-022f-40fb-9754-4059259e26ee
+                transform: ""
+          - columnReference:
+              columnCounter: a7dd327d-75d8-47f8-bbd2-c4471237200b
+              stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa82c553-208a-48cb-bd96-c4d7e96657a5
+                    stepCounter: 008681da-022f-40fb-9754-4059259e26ee
+                transform: ""
+          - columnReference:
+              columnCounter: d66a18f7-410a-4663-ad4a-1d564c88d586
+              stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f21cd9b1-b81c-4ecd-978e-c97987159328
+                    stepCounter: 008681da-022f-40fb-9754-4059259e26ee
+                transform: ""
+          - columnReference:
+              columnCounter: 2614fbf0-0671-40e7-b8c6-40b73a08e208
+              stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12f11893-f899-4ab0-9b85-0583de701fb2
+                    stepCounter: 008681da-022f-40fb-9754-4059259e26ee
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DESTINATION
+                nodeName: STG_PARTSUPP53
+            join:
+              joinCondition: FROM {{ ref('DESTINATION', 'STG_PARTSUPP53') }} "STG_PARTSUPP53"
+            name: STG_PARTSUPP96
+            noLinkRefs: []
+      name: STG_PARTSUPP96
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 79998226-29e2-45aa-a9c5-eae2af3ca4d8
